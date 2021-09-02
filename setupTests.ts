@@ -20,8 +20,8 @@ global.localStorage = {
   clear: jest.fn(),
   removeItem: jest.fn(),
   key: jest.fn(),
-  length: 1,
-} 
+  length: 1
+};
 
 global.cancelAnimationFrame = function () {
   // setTimeout(callback, 0);

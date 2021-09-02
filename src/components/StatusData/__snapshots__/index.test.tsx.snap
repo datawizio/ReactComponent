@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` StatusData component StatusData rendered correctly 1`] = `
+<div
+  className="StatusData__container"
+>
+  <p>
+    01.06.2021 04:02
+  </p>
+  <p>
+    LAST_UPDATE_DATA
+  </p>
+</div>
+`;

@@ -3,6 +3,7 @@ export interface PollingProps {
   onSubmit: (payload: PollingPayload) => void;
   onPollingHide?: () => void;
   onPollingShow?: () => void;
+  cancelGenerateId?: boolean;
 }
 
 export interface StepProps {

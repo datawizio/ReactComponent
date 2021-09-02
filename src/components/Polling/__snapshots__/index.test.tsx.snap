@@ -1,0 +1,822 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Polling component Polling rendered correctly 1`] = `
+<Polling
+  cancelGenerateId={true}
+  onPollingHide={[MockFunction]}
+  onPollingShow={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onSubmit={[MockFunction]}
+  questions={
+    Array [
+      Object {
+        "feedback_type": "test",
+        "polling_template": 2,
+        "question_key": "1",
+      },
+    ]
+  }
+>
+  <Row
+    className="polling-container"
+    key="0"
+  >
+    <div
+      className="ant-row polling-container"
+      style={
+        Object {
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+        }
+      }
+    >
+      <Step
+        onSubmit={[Function]}
+        step={
+          Object {
+            "feedback_type": "test",
+            "id": "0",
+            "polling_template": 2,
+            "question_key": "1",
+          }
+        }
+      >
+        <Col
+          lg={12}
+          xl={8}
+          xs={24}
+        >
+          <div
+            className="ant-col ant-col-xs-24 ant-col-lg-12 ant-col-xl-8"
+            style={Object {}}
+          >
+            <p
+              className="polling-question"
+            >
+              1
+            </p>
+          </div>
+        </Col>
+        <Col
+          lg={12}
+          xl={16}
+          xs={24}
+        >
+          <div
+            className="ant-col ant-col-xs-24 ant-col-lg-12 ant-col-xl-16"
+            style={Object {}}
+          >
+            <div
+              className="polling-form"
+            />
+          </div>
+        </Col>
+      </Step>
+      <ForwardRef(CloseOutlined)
+        className="polling-close-btn"
+        onClick={[Function]}
+      >
+        <AntdIcon
+          className="polling-close-btn"
+          icon={
+            Object {
+              "icon": Object {
+                "attrs": Object {
+                  "focusable": "false",
+                  "viewBox": "64 64 896 896",
+                },
+                "children": Array [
+                  Object {
+                    "attrs": Object {
+                      "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                    },
+                    "tag": "path",
+                  },
+                ],
+                "tag": "svg",
+              },
+              "name": "close",
+              "theme": "outlined",
+            }
+          }
+          onClick={[Function]}
+        >
+          <span
+            aria-label="close"
+            className="anticon anticon-close polling-close-btn"
+            onClick={[Function]}
+            role="img"
+            tabIndex={-1}
+          >
+            <IconReact
+              icon={
+                Object {
+                  "icon": Object {
+                    "attrs": Object {
+                      "focusable": "false",
+                      "viewBox": "64 64 896 896",
+                    },
+                    "children": Array [
+                      Object {
+                        "attrs": Object {
+                          "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                        },
+                        "tag": "path",
+                      },
+                    ],
+                    "tag": "svg",
+                  },
+                  "name": "close",
+                  "theme": "outlined",
+                }
+              }
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="close"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                key="svg-close"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"
+                  key="svg-close-svg-0"
+                />
+              </svg>
+            </IconReact>
+          </span>
+        </AntdIcon>
+      </ForwardRef(CloseOutlined)>
+    </div>
+  </Row>
+</Polling>
+`;
+
+exports[`Polling component Polling with empty questions rendered correctly 1`] = `
+<Polling
+  cancelGenerateId={true}
+  onPollingHide={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onPollingShow={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onSubmit={[MockFunction]}
+  questions={Array []}
+/>
+`;
+
+exports[`Polling component Polling with feedback type mark rendered correctly 1`] = `
+<Polling
+  cancelGenerateId={true}
+  onPollingHide={[MockFunction]}
+  onPollingShow={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onSubmit={[MockFunction]}
+  questions={
+    Array [
+      Object {
+        "feedback_type": "mark",
+        "polling_template": 2,
+        "question_key": "1",
+      },
+    ]
+  }
+>
+  <Row
+    className="polling-container"
+    key="0"
+  >
+    <div
+      className="ant-row polling-container"
+      style={
+        Object {
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+        }
+      }
+    >
+      <Step
+        onSubmit={[Function]}
+        step={
+          Object {
+            "feedback_type": "mark",
+            "id": "0",
+            "mark": null,
+            "polling_template": 2,
+            "question_key": "1",
+          }
+        }
+      >
+        <Col
+          lg={12}
+          xl={8}
+          xs={24}
+        >
+          <div
+            className="ant-col ant-col-xs-24 ant-col-lg-12 ant-col-xl-8"
+            style={Object {}}
+          >
+            <p
+              className="polling-question"
+            >
+              1
+            </p>
+          </div>
+        </Col>
+        <Col
+          lg={12}
+          xl={16}
+          xs={24}
+        >
+          <div
+            className="ant-col ant-col-xs-24 ant-col-lg-12 ant-col-xl-16"
+            style={Object {}}
+          >
+            <div
+              className="polling-form"
+            >
+              <Marks
+                onSubmit={[Function]}
+                step={
+                  Object {
+                    "feedback_type": "mark",
+                    "id": "0",
+                    "mark": null,
+                    "polling_template": 2,
+                    "question_key": "1",
+                  }
+                }
+              >
+                <div
+                  className="polling-marks"
+                >
+                  <span
+                    className="polling-mark"
+                    key="1"
+                    onClick={[Function]}
+                  >
+                    1
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="2"
+                    onClick={[Function]}
+                  >
+                    2
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="3"
+                    onClick={[Function]}
+                  >
+                    3
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="4"
+                    onClick={[Function]}
+                  >
+                    4
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="5"
+                    onClick={[Function]}
+                  >
+                    5
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="6"
+                    onClick={[Function]}
+                  >
+                    6
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="7"
+                    onClick={[Function]}
+                  >
+                    7
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="8"
+                    onClick={[Function]}
+                  >
+                    8
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="9"
+                    onClick={[Function]}
+                  >
+                    9
+                  </span>
+                  <span
+                    className="polling-mark"
+                    key="10"
+                    onClick={[Function]}
+                  >
+                    10
+                  </span>
+                </div>
+              </Marks>
+            </div>
+          </div>
+        </Col>
+      </Step>
+      <ForwardRef(CloseOutlined)
+        className="polling-close-btn"
+        onClick={[Function]}
+      >
+        <AntdIcon
+          className="polling-close-btn"
+          icon={
+            Object {
+              "icon": Object {
+                "attrs": Object {
+                  "focusable": "false",
+                  "viewBox": "64 64 896 896",
+                },
+                "children": Array [
+                  Object {
+                    "attrs": Object {
+                      "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                    },
+                    "tag": "path",
+                  },
+                ],
+                "tag": "svg",
+              },
+              "name": "close",
+              "theme": "outlined",
+            }
+          }
+          onClick={[Function]}
+        >
+          <span
+            aria-label="close"
+            className="anticon anticon-close polling-close-btn"
+            onClick={[Function]}
+            role="img"
+            tabIndex={-1}
+          >
+            <IconReact
+              icon={
+                Object {
+                  "icon": Object {
+                    "attrs": Object {
+                      "focusable": "false",
+                      "viewBox": "64 64 896 896",
+                    },
+                    "children": Array [
+                      Object {
+                        "attrs": Object {
+                          "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                        },
+                        "tag": "path",
+                      },
+                    ],
+                    "tag": "svg",
+                  },
+                  "name": "close",
+                  "theme": "outlined",
+                }
+              }
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="close"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                key="svg-close"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"
+                  key="svg-close-svg-0"
+                />
+              </svg>
+            </IconReact>
+          </span>
+        </AntdIcon>
+      </ForwardRef(CloseOutlined)>
+    </div>
+  </Row>
+</Polling>
+`;
+
+exports[`Polling component Polling with feedback type text rendered correctly 1`] = `
+<Polling
+  cancelGenerateId={true}
+  onPollingHide={[MockFunction]}
+  onPollingShow={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onSubmit={[MockFunction]}
+  questions={
+    Array [
+      Object {
+        "feedback_type": "text",
+        "polling_template": 2,
+        "question_key": "1",
+      },
+    ]
+  }
+>
+  <Row
+    className="polling-container"
+    key="0"
+  >
+    <div
+      className="ant-row polling-container"
+      style={
+        Object {
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+        }
+      }
+    >
+      <Step
+        onSubmit={[Function]}
+        step={
+          Object {
+            "comment": "",
+            "feedback_type": "text",
+            "id": "0",
+            "polling_template": 2,
+            "question_key": "1",
+          }
+        }
+      >
+        <Col
+          lg={12}
+          xl={8}
+          xs={24}
+        >
+          <div
+            className="ant-col ant-col-xs-24 ant-col-lg-12 ant-col-xl-8"
+            style={Object {}}
+          >
+            <p
+              className="polling-question"
+            >
+              1
+            </p>
+          </div>
+        </Col>
+        <Col
+          lg={12}
+          xl={16}
+          xs={24}
+        >
+          <div
+            className="ant-col ant-col-xs-24 ant-col-lg-12 ant-col-xl-16"
+            style={Object {}}
+          >
+            <div
+              className="polling-form"
+            >
+              <Text
+                onSubmit={[Function]}
+                step={
+                  Object {
+                    "comment": "",
+                    "feedback_type": "text",
+                    "id": "0",
+                    "polling_template": 2,
+                    "question_key": "1",
+                  }
+                }
+              >
+                <div
+                  className="polling-text"
+                >
+                  <Input
+                    addonBefore={<ForwardRef(EditOutlined) />}
+                    maxLength={500}
+                    onChange={[Function]}
+                    type="text"
+                  >
+                    <ClearableLabeledInput
+                      addonBefore={<ForwardRef(EditOutlined) />}
+                      bordered={true}
+                      element={
+                        <input
+                          className="ant-input"
+                          maxLength={500}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          type="text"
+                        />
+                      }
+                      focused={false}
+                      handleReset={[Function]}
+                      inputType="input"
+                      maxLength={500}
+                      onChange={[Function]}
+                      prefixCls="ant-input"
+                      triggerFocus={[Function]}
+                      type="text"
+                      value=""
+                    >
+                      <span
+                        className="ant-input-group-wrapper"
+                      >
+                        <span
+                          className="ant-input-wrapper ant-input-group"
+                        >
+                          <span
+                            className="ant-input-group-addon"
+                          >
+                            <ForwardRef(EditOutlined)>
+                              <AntdIcon
+                                icon={
+                                  Object {
+                                    "icon": Object {
+                                      "attrs": Object {
+                                        "focusable": "false",
+                                        "viewBox": "64 64 896 896",
+                                      },
+                                      "children": Array [
+                                        Object {
+                                          "attrs": Object {
+                                            "d": "M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 000-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 009.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z",
+                                          },
+                                          "tag": "path",
+                                        },
+                                      ],
+                                      "tag": "svg",
+                                    },
+                                    "name": "edit",
+                                    "theme": "outlined",
+                                  }
+                                }
+                              >
+                                <span
+                                  aria-label="edit"
+                                  className="anticon anticon-edit"
+                                  role="img"
+                                >
+                                  <IconReact
+                                    icon={
+                                      Object {
+                                        "icon": Object {
+                                          "attrs": Object {
+                                            "focusable": "false",
+                                            "viewBox": "64 64 896 896",
+                                          },
+                                          "children": Array [
+                                            Object {
+                                              "attrs": Object {
+                                                "d": "M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 000-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 009.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z",
+                                              },
+                                              "tag": "path",
+                                            },
+                                          ],
+                                          "tag": "svg",
+                                        },
+                                        "name": "edit",
+                                        "theme": "outlined",
+                                      }
+                                    }
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      data-icon="edit"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="1em"
+                                      key="svg-edit"
+                                      viewBox="64 64 896 896"
+                                      width="1em"
+                                    >
+                                      <path
+                                        d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 000-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 009.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"
+                                        key="svg-edit-svg-0"
+                                      />
+                                    </svg>
+                                  </IconReact>
+                                </span>
+                              </AntdIcon>
+                            </ForwardRef(EditOutlined)>
+                          </span>
+                          <input
+                            className="ant-input"
+                            maxLength={500}
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            style={null}
+                            type="text"
+                            value=""
+                          />
+                        </span>
+                      </span>
+                    </ClearableLabeledInput>
+                  </Input>
+                  <Button
+                    className="polling-send-btn"
+                    disabled={true}
+                    onClick={[Function]}
+                  >
+                    <Wave>
+                      <button
+                        className="ant-btn polling-send-btn"
+                        disabled={true}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <LoadingIcon
+                          existIcon={false}
+                          loading={false}
+                          prefixCls="ant-btn"
+                        >
+                          <CSSMotion
+                            motionName="ant-btn-loading-icon-motion"
+                            onAppearActive={[Function]}
+                            onAppearStart={[Function]}
+                            onEnterActive={[Function]}
+                            onEnterStart={[Function]}
+                            onLeaveActive={[Function]}
+                            onLeaveStart={[Function]}
+                            removeOnLeave={true}
+                            visible={false}
+                          >
+                            <DomWrapper />
+                          </CSSMotion>
+                        </LoadingIcon>
+                        <span
+                          key=".0"
+                        >
+                          SEND
+                        </span>
+                      </button>
+                    </Wave>
+                  </Button>
+                </div>
+              </Text>
+            </div>
+          </div>
+        </Col>
+      </Step>
+      <ForwardRef(CloseOutlined)
+        className="polling-close-btn"
+        onClick={[Function]}
+      >
+        <AntdIcon
+          className="polling-close-btn"
+          icon={
+            Object {
+              "icon": Object {
+                "attrs": Object {
+                  "focusable": "false",
+                  "viewBox": "64 64 896 896",
+                },
+                "children": Array [
+                  Object {
+                    "attrs": Object {
+                      "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                    },
+                    "tag": "path",
+                  },
+                ],
+                "tag": "svg",
+              },
+              "name": "close",
+              "theme": "outlined",
+            }
+          }
+          onClick={[Function]}
+        >
+          <span
+            aria-label="close"
+            className="anticon anticon-close polling-close-btn"
+            onClick={[Function]}
+            role="img"
+            tabIndex={-1}
+          >
+            <IconReact
+              icon={
+                Object {
+                  "icon": Object {
+                    "attrs": Object {
+                      "focusable": "false",
+                      "viewBox": "64 64 896 896",
+                    },
+                    "children": Array [
+                      Object {
+                        "attrs": Object {
+                          "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                        },
+                        "tag": "path",
+                      },
+                    ],
+                    "tag": "svg",
+                  },
+                  "name": "close",
+                  "theme": "outlined",
+                }
+              }
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="close"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                key="svg-close"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"
+                  key="svg-close-svg-0"
+                />
+              </svg>
+            </IconReact>
+          </span>
+        </AntdIcon>
+      </ForwardRef(CloseOutlined)>
+    </div>
+  </Row>
+</Polling>
+`;

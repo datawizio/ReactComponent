@@ -8,7 +8,7 @@ exports[`InfiniteScroll component Render InfiniteScroll correctly 1`] = `
   onBottom={[MockFunction]}
   overflow="auto"
   showLoader={true}
-  triggerCoeff={true}
+  triggerCoeff={10}
 >
   <div
     className="infinite-scroll"

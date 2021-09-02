@@ -91,6 +91,7 @@ const TableXlsxExporter: React.FC<TableXlsxExporterProps> = props => {
       menuItems ? <Menu onClick={handleMenuClick}>{menuItems}</Menu> : null,
     [menuItems]
   );
+  // console.log(menu);
 
   return (
     <div className="table-xlsx-exporter table-toolbar--right">

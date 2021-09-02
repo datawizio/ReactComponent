@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListBody component ListBody render corectly 1`] = `
+<ListBodyWrapper
+  filteredItems={
+    Array [
+      Object {
+        "key": "a",
+        "title": "a",
+      },
+      Object {
+        "key": "b",
+        "title": "b",
+      },
+      Object {
+        "key": "c",
+        "title": "c",
+      },
+    ]
+  }
+  loadData={[MockFunction]}
+  loading={false}
+  onItemSelect={[MockFunction]}
+  prefixCls="list-body"
+  selectedKeys={
+    Array [
+      "a",
+      "b",
+    ]
+  }
+>
+  <ListBody
+    filteredItems={
+      Array [
+        Object {
+          "key": "a",
+          "title": "a",
+        },
+        Object {
+          "key": "b",
+          "title": "b",
+        },
+        Object {
+          "key": "c",
+          "title": "c",
+        },
+      ]
+    }
+    loadData={[MockFunction]}
+    loading={false}
+    onItemSelect={[MockFunction]}
+    prefixCls="list-body"
+    selectedKeys={
+      Array [
+        "a",
+        "b",
+      ]
+    }
+  >
+    <ul
+      className="list-body-content"
+    >
+      <Memo(ListItem)
+        checked={true}
+        item={
+          Object {
+            "key": "a",
+            "title": "a",
+          }
+        }
+        key="a"
+        onClick={[Function]}
+        prefixCls="list-body"
+      >
+        <li
+          className="list-body-content-item list-body-content-item-checked"
+          onClick={[Function]}
+          title="a"
+        >
+          <Checkbox
+            checked={true}
+          >
+            <Checkbox
+              checked={true}
+            >
+              <label
+                className="ant-checkbox-wrapper ant-checkbox-wrapper-checked"
+              >
+                <Checkbox
+                  checked={true}
+                  className=""
+                  defaultChecked={false}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  prefixCls="ant-checkbox"
+                  style={Object {}}
+                  type="checkbox"
+                >
+                  <span
+                    className="ant-checkbox ant-checkbox-checked"
+                    style={Object {}}
+                  >
+                    <input
+                      checked={true}
+                      className="ant-checkbox-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      type="checkbox"
+                    />
+                    <span
+                      className="ant-checkbox-inner"
+                    />
+                  </span>
+                </Checkbox>
+              </label>
+            </Checkbox>
+          </Checkbox>
+          <span
+            className="list-body-content-item-text"
+          >
+            a
+          </span>
+        </li>
+      </Memo(ListItem)>
+      <Memo(ListItem)
+        checked={true}
+        item={
+          Object {
+            "key": "b",
+            "title": "b",
+          }
+        }
+        key="b"
+        onClick={[Function]}
+        prefixCls="list-body"
+      >
+        <li
+          className="list-body-content-item list-body-content-item-checked"
+          onClick={[Function]}
+          title="b"
+        >
+          <Checkbox
+            checked={true}
+          >
+            <Checkbox
+              checked={true}
+            >
+              <label
+                className="ant-checkbox-wrapper ant-checkbox-wrapper-checked"
+              >
+                <Checkbox
+                  checked={true}
+                  className=""
+                  defaultChecked={false}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  prefixCls="ant-checkbox"
+                  style={Object {}}
+                  type="checkbox"
+                >
+                  <span
+                    className="ant-checkbox ant-checkbox-checked"
+                    style={Object {}}
+                  >
+                    <input
+                      checked={true}
+                      className="ant-checkbox-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      type="checkbox"
+                    />
+                    <span
+                      className="ant-checkbox-inner"
+                    />
+                  </span>
+                </Checkbox>
+              </label>
+            </Checkbox>
+          </Checkbox>
+          <span
+            className="list-body-content-item-text"
+          >
+            b
+          </span>
+        </li>
+      </Memo(ListItem)>
+      <Memo(ListItem)
+        checked={false}
+        item={
+          Object {
+            "key": "c",
+            "title": "c",
+          }
+        }
+        key="c"
+        onClick={[Function]}
+        prefixCls="list-body"
+      >
+        <li
+          className="list-body-content-item"
+          onClick={[Function]}
+          title="c"
+        >
+          <Checkbox
+            checked={false}
+          >
+            <Checkbox
+              checked={false}
+            >
+              <label
+                className="ant-checkbox-wrapper"
+              >
+                <Checkbox
+                  checked={false}
+                  className=""
+                  defaultChecked={false}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  prefixCls="ant-checkbox"
+                  style={Object {}}
+                  type="checkbox"
+                >
+                  <span
+                    className="ant-checkbox"
+                    style={Object {}}
+                  >
+                    <input
+                      checked={false}
+                      className="ant-checkbox-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      type="checkbox"
+                    />
+                    <span
+                      className="ant-checkbox-inner"
+                    />
+                  </span>
+                </Checkbox>
+              </label>
+            </Checkbox>
+          </Checkbox>
+          <span
+            className="list-body-content-item-text"
+          >
+            c
+          </span>
+        </li>
+      </Memo(ListItem)>
+    </ul>
+  </ListBody>
+</ListBodyWrapper>
+`;

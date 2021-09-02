@@ -1,0 +1,456 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransferList should render corectly 1`] = `
+<TransferList
+  checkedKeys={
+    Array [
+      "a",
+    ]
+  }
+  dataSource={
+    Array [
+      Object {
+        "key": "a",
+        "title": "a",
+      },
+      Object {
+        "key": "b",
+        "title": "b",
+      },
+      Object {
+        "disabled": false,
+        "key": "c",
+        "title": "c",
+      },
+    ]
+  }
+  direction="right"
+  loadData={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "page": 1,
+            "search": "",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "data": Array [
+              Object {
+                "key": "a",
+                "title": "a",
+              },
+              Object {
+                "key": "b",
+                "title": "b",
+              },
+              Object {
+                "key": "c",
+                "title": "c",
+              },
+            ],
+          },
+        },
+      ],
+    }
+  }
+  noDataText="Not Found"
+  onItemSelect={[MockFunction]}
+  onItemSelectAll={[MockFunction]}
+  onScroll={[MockFunction]}
+  prefixCls="ant-transfer-list"
+  searchText="string"
+  selectedText="string"
+  showSearch={false}
+  titleText="string"
+  value={
+    Object {
+      "exclude": Array [],
+      "include": Array [],
+    }
+  }
+>
+  <div
+    className="ant-transfer-list-container"
+  >
+    <div
+      className="ant-transfer-list-title"
+    >
+      <span
+        className="ant-transfer-list-title-text"
+      >
+        string
+      </span>
+      <div />
+    </div>
+    <div
+      className="ant-transfer-list"
+    >
+      <div
+        className="ant-transfer-list-header"
+      >
+        <Checkbox
+          checked={true}
+          indeterminate={false}
+          onChange={[Function]}
+        >
+          <Checkbox
+            checked={true}
+            indeterminate={false}
+            onChange={[Function]}
+          >
+            <label
+              className="ant-checkbox-wrapper ant-checkbox-wrapper-checked"
+            >
+              <Checkbox
+                checked={true}
+                className=""
+                defaultChecked={false}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                prefixCls="ant-checkbox"
+                style={Object {}}
+                type="checkbox"
+              >
+                <span
+                  className="ant-checkbox ant-checkbox-checked"
+                  style={Object {}}
+                >
+                  <input
+                    checked={true}
+                    className="ant-checkbox-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onKeyUp={[Function]}
+                    type="checkbox"
+                  />
+                  <span
+                    className="ant-checkbox-inner"
+                  />
+                </span>
+              </Checkbox>
+            </label>
+          </Checkbox>
+        </Checkbox>
+        <span
+          className="ant-transfer-list-header-selected"
+        >
+          string
+          : 
+          1
+           / 
+          0
+        </span>
+      </div>
+      <div
+        className="ant-transfer-list-body"
+      >
+        <div
+          className="ant-transfer-list-body-not-found"
+        >
+          Not Found
+        </div>
+      </div>
+    </div>
+  </div>
+</TransferList>
+`;
+
+exports[`TransferList should render corectly with search 1`] = `
+<TransferList
+  checkedKeys={
+    Array [
+      "a",
+    ]
+  }
+  dataSource={
+    Array [
+      Object {
+        "key": "a",
+        "title": "a",
+      },
+      Object {
+        "key": "b",
+        "title": "b",
+      },
+      Object {
+        "disabled": false,
+        "key": "c",
+        "title": "c",
+      },
+    ]
+  }
+  direction="right"
+  loadData={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "page": 1,
+            "search": "",
+          },
+        ],
+        Array [
+          Object {
+            "page": 1,
+            "search": "",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "data": Array [
+              Object {
+                "key": "a",
+                "title": "a",
+              },
+              Object {
+                "key": "b",
+                "title": "b",
+              },
+              Object {
+                "key": "c",
+                "title": "c",
+              },
+            ],
+          },
+        },
+        Object {
+          "type": "return",
+          "value": Object {
+            "data": Array [
+              Object {
+                "key": "a",
+                "title": "a",
+              },
+              Object {
+                "key": "b",
+                "title": "b",
+              },
+              Object {
+                "key": "c",
+                "title": "c",
+              },
+            ],
+          },
+        },
+      ],
+    }
+  }
+  noDataText="Not Found"
+  onItemSelect={[MockFunction]}
+  onItemSelectAll={[MockFunction]}
+  onScroll={[MockFunction]}
+  prefixCls="ant-transfer-list"
+  searchText="string"
+  selectedText="string"
+  showSearch={true}
+  titleText="string"
+  value={
+    Object {
+      "exclude": Array [],
+      "include": Array [],
+    }
+  }
+>
+  <div
+    className="ant-transfer-list-container"
+  >
+    <div
+      className="ant-transfer-list-title"
+    >
+      <span
+        className="ant-transfer-list-title-text"
+      >
+        string
+      </span>
+      <div />
+    </div>
+    <div
+      className="ant-transfer-list"
+    >
+      <div
+        className="ant-transfer-list-header"
+      >
+        <Checkbox
+          checked={true}
+          indeterminate={false}
+          onChange={[Function]}
+        >
+          <Checkbox
+            checked={true}
+            indeterminate={false}
+            onChange={[Function]}
+          >
+            <label
+              className="ant-checkbox-wrapper ant-checkbox-wrapper-checked"
+            >
+              <Checkbox
+                checked={true}
+                className=""
+                defaultChecked={false}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                prefixCls="ant-checkbox"
+                style={Object {}}
+                type="checkbox"
+              >
+                <span
+                  className="ant-checkbox ant-checkbox-checked"
+                  style={Object {}}
+                >
+                  <input
+                    checked={true}
+                    className="ant-checkbox-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyPress={[Function]}
+                    onKeyUp={[Function]}
+                    type="checkbox"
+                  />
+                  <span
+                    className="ant-checkbox-inner"
+                  />
+                </span>
+              </Checkbox>
+            </label>
+          </Checkbox>
+        </Checkbox>
+        <span
+          className="ant-transfer-list-header-selected"
+        >
+          string
+          : 
+          1
+           / 
+          0
+        </span>
+      </div>
+      <div
+        className="ant-transfer-list-body ant-transfer-list-body-with-search"
+      >
+        <div
+          className="ant-transfer-list-body-search-wrapper"
+        >
+          <LiteSearchInput
+            debounceDelay={0}
+            onChange={[Function]}
+            onClear={[Function]}
+            placeholder="string"
+            value=""
+          >
+            <span
+              className="lite-search"
+            >
+              <ForwardRef(SearchOutlined)
+                className="lite-search__search-icon"
+              >
+                <AntdIcon
+                  className="lite-search__search-icon"
+                  icon={
+                    Object {
+                      "icon": Object {
+                        "attrs": Object {
+                          "focusable": "false",
+                          "viewBox": "64 64 896 896",
+                        },
+                        "children": Array [
+                          Object {
+                            "attrs": Object {
+                              "d": "M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z",
+                            },
+                            "tag": "path",
+                          },
+                        ],
+                        "tag": "svg",
+                      },
+                      "name": "search",
+                      "theme": "outlined",
+                    }
+                  }
+                >
+                  <span
+                    aria-label="search"
+                    className="anticon anticon-search lite-search__search-icon"
+                    role="img"
+                  >
+                    <IconReact
+                      icon={
+                        Object {
+                          "icon": Object {
+                            "attrs": Object {
+                              "focusable": "false",
+                              "viewBox": "64 64 896 896",
+                            },
+                            "children": Array [
+                              Object {
+                                "attrs": Object {
+                                  "d": "M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z",
+                                },
+                                "tag": "path",
+                              },
+                            ],
+                            "tag": "svg",
+                          },
+                          "name": "search",
+                          "theme": "outlined",
+                        }
+                      }
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="search"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        key="svg-search"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
+                          key="svg-search-svg-0"
+                        />
+                      </svg>
+                    </IconReact>
+                  </span>
+                </AntdIcon>
+              </ForwardRef(SearchOutlined)>
+              <input
+                className="lite-search__input"
+                onChange={[Function]}
+                placeholder="string"
+                value=""
+              />
+            </span>
+          </LiteSearchInput>
+        </div>
+        <div
+          className="ant-transfer-list-body-not-found"
+        >
+          Not Found
+        </div>
+      </div>
+    </div>
+  </div>
+</TransferList>
+`;

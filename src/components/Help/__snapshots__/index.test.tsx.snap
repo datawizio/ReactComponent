@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Help component Help rendered correctly 1`] = `
+<Help
+  onHelperClick={[MockFunction]}
+  onServiceUpdateClick={[MockFunction]}
+  onSupportLinkClick={[MockFunction]}
+  onSupportModalSubmit={[MockFunction]}
+  onTutorialLinkClick={[MockFunction]}
+  uploadFileURL="url"
+>
+  <HelpMenu
+    onHelperClick={[MockFunction]}
+    onServiceUpdateClick={[MockFunction]}
+    onSupportClick={[Function]}
+    onTutorialClick={[MockFunction]}
+  >
+    <Dropdown
+      mouseEnterDelay={0.15}
+      mouseLeaveDelay={0.1}
+      overlay={
+        <Menu
+          className="help-menu-dropdown"
+          theme="light"
+        >
+          <MenuItem
+            onClick={[MockFunction]}
+          >
+            READ_TUTORIAL
+          </MenuItem>
+          <MenuItem
+            onClick={[Function]}
+          >
+            SUPPORT
+          </MenuItem>
+          <MenuItem
+            onClick={[MockFunction]}
+          >
+            SERVICE_UPDATE
+          </MenuItem>
+          <MenuItem
+            onClick={[MockFunction]}
+          >
+            BES_HELPER
+          </MenuItem>
+        </Menu>
+      }
+      placement="bottomRight"
+      trigger={
+        Array [
+          "click",
+        ]
+      }
+    >
+      <ForwardRef(Dropdown)
+        mouseEnterDelay={0.15}
+        mouseLeaveDelay={0.1}
+        overlay={[Function]}
+        overlayClassName=""
+        placement="bottomRight"
+        prefixCls="ant-dropdown"
+        transitionName="slide-up"
+        trigger={
+          Array [
+            "click",
+          ]
+        }
+      >
+        <Trigger
+          action={
+            Array [
+              "click",
+            ]
+          }
+          afterPopupVisibleChange={[Function]}
+          autoDestroy={false}
+          blurDelay={0.15}
+          builtinPlacements={
+            Object {
+              "bottomCenter": Object {
+                "offset": Array [
+                  0,
+                  4,
+                ],
+                "overflow": Object {
+                  "adjustX": 1,
+                  "adjustY": 1,
+                },
+                "points": Array [
+                  "tc",
+                  "bc",
+                ],
+                "targetOffset": Array [
+                  0,
+                  0,
+                ],
+              },
+              "bottomLeft": Object {
+                "offset": Array [
+                  0,
+                  4,
+                ],
+                "overflow": Object {
+                  "adjustX": 1,
+                  "adjustY": 1,
+                },
+                "points": Array [
+                  "tl",
+                  "bl",
+                ],
+                "targetOffset": Array [
+                  0,
+                  0,
+                ],
+              },
+              "bottomRight": Object {
+                "offset": Array [
+                  0,
+                  4,
+                ],
+                "overflow": Object {
+                  "adjustX": 1,
+                  "adjustY": 1,
+                },
+                "points": Array [
+                  "tr",
+                  "br",
+                ],
+                "targetOffset": Array [
+                  0,
+                  0,
+                ],
+              },
+              "topCenter": Object {
+                "offset": Array [
+                  0,
+                  -4,
+                ],
+                "overflow": Object {
+                  "adjustX": 1,
+                  "adjustY": 1,
+                },
+                "points": Array [
+                  "bc",
+                  "tc",
+                ],
+                "targetOffset": Array [
+                  0,
+                  0,
+                ],
+              },
+              "topLeft": Object {
+                "offset": Array [
+                  0,
+                  -4,
+                ],
+                "overflow": Object {
+                  "adjustX": 1,
+                  "adjustY": 1,
+                },
+                "points": Array [
+                  "bl",
+                  "tl",
+                ],
+                "targetOffset": Array [
+                  0,
+                  0,
+                ],
+              },
+              "topRight": Object {
+                "offset": Array [
+                  0,
+                  -4,
+                ],
+                "overflow": Object {
+                  "adjustX": 1,
+                  "adjustY": 1,
+                },
+                "points": Array [
+                  "br",
+                  "tr",
+                ],
+                "targetOffset": Array [
+                  0,
+                  0,
+                ],
+              },
+            }
+          }
+          defaultPopupVisible={false}
+          destroyPopupOnHide={false}
+          focusDelay={0}
+          getDocument={[Function]}
+          getPopupClassNameFromAlign={[Function]}
+          hideAction={Array []}
+          mask={false}
+          maskClosable={true}
+          mouseEnterDelay={0.15}
+          mouseLeaveDelay={0.1}
+          onPopupAlign={[Function]}
+          onPopupVisibleChange={[Function]}
+          overlay={[Function]}
+          popup={[Function]}
+          popupAlign={Object {}}
+          popupClassName=""
+          popupPlacement="bottomRight"
+          popupStyle={Object {}}
+          popupTransitionName="slide-up"
+          prefixCls="ant-dropdown"
+          showAction={Array []}
+          stretch="minWidth"
+        >
+          <Button
+            className="ant-dropdown-trigger help-icon"
+            key="trigger"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            type="link"
+          >
+            <button
+              className="ant-btn ant-btn-link ant-dropdown-trigger help-icon"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <LoadingIcon
+                existIcon={false}
+                loading={false}
+                prefixCls="ant-btn"
+              >
+                <CSSMotion
+                  motionName="ant-btn-loading-icon-motion"
+                  onAppearActive={[Function]}
+                  onAppearStart={[Function]}
+                  onEnterActive={[Function]}
+                  onEnterStart={[Function]}
+                  onLeaveActive={[Function]}
+                  onLeaveStart={[Function]}
+                  removeOnLeave={true}
+                  visible={false}
+                >
+                  <DomWrapper />
+                </CSSMotion>
+              </LoadingIcon>
+              <ForwardRef(QuestionCircleOutlined)
+                key=".0"
+              >
+                <AntdIcon
+                  icon={
+                    Object {
+                      "icon": Object {
+                        "attrs": Object {
+                          "focusable": "false",
+                          "viewBox": "64 64 896 896",
+                        },
+                        "children": Array [
+                          Object {
+                            "attrs": Object {
+                              "d": "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z",
+                            },
+                            "tag": "path",
+                          },
+                          Object {
+                            "attrs": Object {
+                              "d": "M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z",
+                            },
+                            "tag": "path",
+                          },
+                        ],
+                        "tag": "svg",
+                      },
+                      "name": "question-circle",
+                      "theme": "outlined",
+                    }
+                  }
+                >
+                  <span
+                    aria-label="question-circle"
+                    className="anticon anticon-question-circle"
+                    role="img"
+                  >
+                    <IconReact
+                      icon={
+                        Object {
+                          "icon": Object {
+                            "attrs": Object {
+                              "focusable": "false",
+                              "viewBox": "64 64 896 896",
+                            },
+                            "children": Array [
+                              Object {
+                                "attrs": Object {
+                                  "d": "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z",
+                                },
+                                "tag": "path",
+                              },
+                              Object {
+                                "attrs": Object {
+                                  "d": "M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z",
+                                },
+                                "tag": "path",
+                              },
+                            ],
+                            "tag": "svg",
+                          },
+                          "name": "question-circle",
+                          "theme": "outlined",
+                        }
+                      }
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="question-circle"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        key="svg-question-circle"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                          key="svg-question-circle-svg-0"
+                        />
+                        <path
+                          d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                          key="svg-question-circle-svg-1"
+                        />
+                      </svg>
+                    </IconReact>
+                  </span>
+                </AntdIcon>
+              </ForwardRef(QuestionCircleOutlined)>
+            </button>
+          </Button>
+        </Trigger>
+      </ForwardRef(Dropdown)>
+    </Dropdown>
+  </HelpMenu>
+  <SupportModal
+    onSubmit={[MockFunction]}
+    setVisible={[Function]}
+    uploadFileURL="url"
+    visible={false}
+  >
+    <Modal
+      centered={true}
+      className="support-modal"
+      confirmLoading={false}
+      destroyOnClose={true}
+      footer={
+        <Button
+          border={true}
+          disabled={true}
+          onClick={[Function]}
+          type="primary"
+        >
+          SEND
+        </Button>
+      }
+      maskTransitionName="fade"
+      okType="primary"
+      onCancel={[Function]}
+      title="SUPPORT"
+      transitionName="zoom"
+      visible={false}
+      width={520}
+    >
+      <Dialog
+        className="support-modal"
+        closeIcon={
+          <span
+            className="ant-modal-close-x"
+          >
+            <ForwardRef(CloseOutlined)
+              className="ant-modal-close-icon"
+            />
+          </span>
+        }
+        confirmLoading={false}
+        destroyOnClose={true}
+        focusTriggerAfterClose={true}
+        footer={
+          <Button
+            border={true}
+            disabled={true}
+            onClick={[Function]}
+            type="primary"
+          >
+            SEND
+          </Button>
+        }
+        maskTransitionName="fade"
+        okType="primary"
+        onCancel={[Function]}
+        onClose={[Function]}
+        prefixCls="ant-modal"
+        title="SUPPORT"
+        transitionName="zoom"
+        visible={false}
+        width={520}
+        wrapClassName="ant-modal-centered"
+      />
+    </Modal>
+  </SupportModal>
+  <div
+    className="divider"
+  />
+</Help>
+`;

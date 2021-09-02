@@ -13,7 +13,8 @@ const SupportModal: React.FC<ISupportModal> = ({
   onSubmit,
   visible,
   setVisible,
-  uploadFileURL
+  uploadFileURL,
+  _testState
 }) => {
   const { translate } = useContext(ConfigContext);
 
@@ -23,7 +24,9 @@ const SupportModal: React.FC<ISupportModal> = ({
     uploads: []
   };
 
-  const [formData, setFormData] = useState<ISupportFormData>(defaultState);
+  const [formData, setFormData] = useState<ISupportFormData>(
+    _testState || defaultState
+  );
   const [filename, setFilename] = useState<string>("");
 
   const [form] = Form.useForm();
@@ -109,12 +112,7 @@ const SupportModal: React.FC<ISupportModal> = ({
         });
       }
     };
-  }, [
-    filename,
-    formData.uploads,
-    translate,
-    uploadFileURL
-  ]);
+  }, [filename, formData.uploads, translate, uploadFileURL]);
 
   const handleFieldChange = useCallback((name, value) => {
     setFormData(prevState => {

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxButton component CheckboxButton with props rendered correctly 1`] = `
+<CheckboxButton
+  border={false}
+  checked={false}
+  highlight={true}
+  onChange={[MockFunction]}
+  text="text"
+>
+  <Button
+    className="dw-btn button-checkbox no-border highlight"
+    onClick={[Function]}
+  >
+    <Wave>
+      <button
+        className="ant-btn dw-btn button-checkbox no-border highlight"
+        onClick={[Function]}
+        type="button"
+      >
+        <LoadingIcon
+          existIcon={false}
+          loading={false}
+          prefixCls="ant-btn"
+        >
+          <CSSMotion
+            motionName="ant-btn-loading-icon-motion"
+            onAppearActive={[Function]}
+            onAppearStart={[Function]}
+            onEnterActive={[Function]}
+            onEnterStart={[Function]}
+            onLeaveActive={[Function]}
+            onLeaveStart={[Function]}
+            removeOnLeave={true}
+            visible={false}
+          >
+            <DomWrapper />
+          </CSSMotion>
+        </LoadingIcon>
+        <span
+          key=".0"
+        >
+          text
+        </span>
+      </button>
+    </Wave>
+  </Button>
+</CheckboxButton>
+`;
+
+exports[`CheckboxButton component CheckboxButton without props rendered correctly 1`] = `
+<CheckboxButton
+  border={true}
+>
+  <Button
+    className="dw-btn button-checkbox"
+    onClick={[Function]}
+  >
+    <Wave>
+      <button
+        className="ant-btn dw-btn button-checkbox"
+        onClick={[Function]}
+        type="button"
+      >
+        <LoadingIcon
+          existIcon={false}
+          loading={false}
+          prefixCls="ant-btn"
+        >
+          <CSSMotion
+            motionName="ant-btn-loading-icon-motion"
+            onAppearActive={[Function]}
+            onAppearStart={[Function]}
+            onEnterActive={[Function]}
+            onEnterStart={[Function]}
+            onLeaveActive={[Function]}
+            onLeaveStart={[Function]}
+            removeOnLeave={true}
+            visible={false}
+          >
+            <DomWrapper />
+          </CSSMotion>
+        </LoadingIcon>
+      </button>
+    </Wave>
+  </Button>
+</CheckboxButton>
+`;

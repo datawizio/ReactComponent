@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserItem component UserItem rendered correctly 1`] = `
+<div
+  className="user-cell"
+>
+  <div
+    className="user-cell__photo"
+  >
+    <UserAvatar
+      name="Paul McCartney"
+      src="somePictures.png"
+    />
+  </div>
+  <div
+    className="user-cell__info"
+  >
+    <span
+      className="user-cell__full-name"
+    >
+      Paul McCartney
+    </span>
+    <span
+      className="user-cell__email"
+    >
+      mock@mail.com
+    </span>
+  </div>
+</div>
+`;

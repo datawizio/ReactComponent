@@ -13,6 +13,7 @@ import "./index.less";
 
 const Polling: React.FC<PollingProps> = ({
   questions,
+  cancelGenerateId,
   onSubmit,
   onPollingHide,
   onPollingShow
@@ -24,14 +25,15 @@ const Polling: React.FC<PollingProps> = ({
   const steps = useMemo(() => {
     if (!questions || !questions.length) return [];
 
-    return questions.map((q: PollingQuestion) => {
+    return questions.map((q: PollingQuestion, index: number) => {
       const step: PollingStep = {
         question_key: q.question_key,
         polling_template: q.polling_template,
         feedback_type: q.feedback_type,
-        id:
-          String(new Date().getTime()) +
-          String((Math.random() * 1000).toFixed())
+        id: cancelGenerateId
+          ? index.toString()
+          : String(new Date().getTime()) +
+            String((Math.random() * 1000).toFixed())
       };
 
       if (q.feedback_type === "mark") {

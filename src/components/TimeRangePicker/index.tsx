@@ -16,7 +16,8 @@ export interface TimePickerProps
 const TimeRangePicker = React.forwardRef<any, TimePickerProps>(
   ({ value, fullWidth, ...props }, ref) => {
     const { translate } = useContext(ConfigContext);
-    const handleChange = (_, [from, to]) => {
+    const handleChange = (_, value) => {
+      const [from, to] = value ? value : [null, null];
       props.onChange && props.onChange({ from, to });
     };
     return (

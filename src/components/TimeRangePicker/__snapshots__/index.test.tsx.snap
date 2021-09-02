@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeRangePicker component TimeRangePicker rendered correctly 1`] = `
+<RangePicker
+  className="ant-picker-w100"
+  onChange={[Function]}
+  picker="time"
+  placeholder={
+    Array [
+      "START_TIME",
+      "END_TIME",
+    ]
+  }
+  value={
+    Array [
+      "2021-07-15T20:00:00.000Z",
+      "2021-07-15T20:00:00.000Z",
+    ]
+  }
+/>
+`;
+
+exports[`TimeRangePicker component TimeRangePicker rendered correctly with empty props 1`] = `
+<RangePicker
+  className=""
+  onChange={[Function]}
+  picker="time"
+  placeholder={
+    Array [
+      "START_TIME",
+      "END_TIME",
+    ]
+  }
+/>
+`;
+
+exports[`TimeRangePicker component TimeRangePicker trigger onChange with empty 1`] = `
+<RangePicker
+  className="ant-picker-w100"
+  onChange={[Function]}
+  picker="time"
+  placeholder={
+    Array [
+      "START_TIME",
+      "END_TIME",
+    ]
+  }
+  value={
+    Array [
+      "2021-07-15T20:00:00.000Z",
+      "2021-07-15T20:00:00.000Z",
+    ]
+  }
+/>
+`;
+
+exports[`TimeRangePicker component TimeRangePicker trigger onChange with mock 1`] = `
+<RangePicker
+  className="ant-picker-w100"
+  onChange={[Function]}
+  picker="time"
+  placeholder={
+    Array [
+      "START_TIME",
+      "END_TIME",
+    ]
+  }
+  value={
+    Array [
+      "2021-07-15T20:00:00.000Z",
+      "2021-07-15T20:00:00.000Z",
+    ]
+  }
+/>
+`;

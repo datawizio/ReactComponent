@@ -1,5 +1,12 @@
 const esModules = ["rc-select"].join("|");
 
+const transformIgnorePatterns = [
+  "/dist/",
+  // Ignore modules without es dir.
+  // Update: @babel/runtime should also be transformed
+  "node_modules/(?!.*@(babel|ant-design))[^/]+?/(?!(es|node_modules)/)"
+];
+
 module.exports = {
   roots: ["./src"],
   verbose: true,
@@ -23,6 +30,7 @@ module.exports = {
       "identity-obj-proxy",
     "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   },
+  transformIgnorePatterns,
   snapshotSerializers: ["enzyme-to-json/serializer"],
   globals: {
     window: {
