@@ -101,6 +101,13 @@ const Column: React.FC<ColumnProps> = props => {
     [model]
   );
 
+  const calculateWidth = useCallback(
+    (target: HTMLElement | undefined) => {
+      return getColumnWidth(target, model.colMinWidth, virtual);
+    },
+    [model.colMinWidth, virtual]
+  );
+
   const [, dragRef] = useDrag({
     item: { type: "column", key: model.key, level },
     canDrag: !model.fixed && model.draggable !== false
@@ -252,11 +259,7 @@ const Column: React.FC<ColumnProps> = props => {
     }
 
     const fn = () => {
-      const columnWidth = getColumnWidth(
-        columnRef.current,
-        model.colMinWidth,
-        virtual
-      );
+      const columnWidth = calculateWidth(columnRef.current);
 
       if (
         columnRef?.current &&
@@ -286,35 +289,28 @@ const Column: React.FC<ColumnProps> = props => {
     if (startedResize?.current) {
       const colKey = model.originalKey ? model.originalKey : model.key;
 
-      onWidthChange(
-        colKey.toString(),
-        getColumnWidth(columnRef.current, model.colMinWidth, virtual)
-      );
+      onWidthChange(colKey.toString(), calculateWidth(columnRef.current));
 
       startedResize.current = false;
     }
-  }, [model.originalKey, model.key, model.colMinWidth, onWidthChange, virtual]);
+  }, [model.originalKey, model.key, onWidthChange, calculateWidth]);
 
   const onMouseDownHandler = useCallback(
     event => {
       if (onWidthChange) {
         startedResize.current = true;
       }
-      setLastWidth(getColumnWidth(event.target, model.colMinWidth, virtual));
+      setLastWidth(calculateWidth(event.target));
     },
-    [model.colMinWidth, onWidthChange, virtual]
+    [onWidthChange, calculateWidth]
   );
 
   const onClickHandler = useCallback(
     event => {
-      const currentWidth = getColumnWidth(
-        event.target,
-        model.colMinWidth,
-        virtual
-      );
+      const currentWidth = calculateWidth(event.target);
       lastWidth === currentWidth && onClick && onClick(event);
     },
-    [lastWidth, model.colMinWidth, onClick, virtual]
+    [lastWidth, onClick, calculateWidth]
   );
 
   const className = useMemo(() => {
