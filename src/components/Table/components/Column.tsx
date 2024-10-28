@@ -29,8 +29,12 @@ const withMinimum = (value: number, min: number) => {
   return value < min ? min : value;
 };
 
-const getColumnWidth = (column: HTMLElement | undefined, minWidth: number) => {
-  if (column?.style.width) {
+const getColumnWidth = (
+  column: HTMLElement | undefined,
+  minWidth: number,
+  virtual: boolean
+) => {
+  if (!virtual && column?.style.width) {
     return withMinimum(parseInt(column.style.width), minWidth);
   }
 
@@ -95,6 +99,13 @@ const Column: React.FC<ColumnProps> = props => {
   const columnWithIconShown = useMemo(
     () => !!model.icon && !!columnIcons[model.icon],
     [model]
+  );
+
+  const calculateWidth = useCallback(
+    (target: HTMLElement | undefined) => {
+      return getColumnWidth(target, model.colMinWidth, virtual);
+    },
+    [model.colMinWidth, virtual]
   );
 
   const [, dragRef] = useDrag({
@@ -248,7 +259,7 @@ const Column: React.FC<ColumnProps> = props => {
     }
 
     const fn = () => {
-      const columnWidth = getColumnWidth(columnRef.current, model.colMinWidth);
+      const columnWidth = calculateWidth(columnRef.current);
 
       if (
         columnRef?.current &&
@@ -278,31 +289,28 @@ const Column: React.FC<ColumnProps> = props => {
     if (startedResize?.current) {
       const colKey = model.originalKey ? model.originalKey : model.key;
 
-      onWidthChange(
-        colKey.toString(),
-        getColumnWidth(columnRef.current, model.colMinWidth)
-      );
+      onWidthChange(colKey.toString(), calculateWidth(columnRef.current));
 
       startedResize.current = false;
     }
-  }, [model.originalKey, model.key, model.colMinWidth, onWidthChange]);
+  }, [model.originalKey, model.key, onWidthChange, calculateWidth]);
 
   const onMouseDownHandler = useCallback(
     event => {
       if (onWidthChange) {
         startedResize.current = true;
       }
-      setLastWidth(getColumnWidth(event.target, model.colMinWidth));
+      setLastWidth(calculateWidth(event.target));
     },
-    [model.colMinWidth, onWidthChange]
+    [onWidthChange, calculateWidth]
   );
 
   const onClickHandler = useCallback(
     event => {
-      const currentWidth = getColumnWidth(event.target, model.colMinWidth);
+      const currentWidth = calculateWidth(event.target);
       lastWidth === currentWidth && onClick && onClick(event);
     },
-    [lastWidth, model.colMinWidth, onClick]
+    [lastWidth, onClick, calculateWidth]
   );
 
   const className = useMemo(() => {
