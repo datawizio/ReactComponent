@@ -16,8 +16,13 @@ export const translateObjects = <T>(
   }));
 };
 
+interface TranslateTableResponseOptions {
+  onlyColumns?: boolean;
+}
+
 export function translateTableResponse(
-  fetcher: (...args: any) => Promise<TableResponse>
+  fetcher: (...args: any) => Promise<TableResponse>,
+  options?: TranslateTableResponseOptions
 ) {
   return async (...args: any) => {
     let response = await fetcher(...args);
@@ -28,8 +33,10 @@ export function translateTableResponse(
       } = response;
 
       response.results.columns = columns && translateColumns(columns);
-      response.results.dataSource =
-        dataSource && translateDataSource(dataSource);
+
+      if (!options?.onlyColumns && dataSource) {
+        response.results.dataSource = translateDataSource(dataSource);
+      }
     }
 
     return response;
