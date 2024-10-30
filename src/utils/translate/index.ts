@@ -34,9 +34,8 @@ export function translateTableResponse(
 
       response.results.columns = columns && translateColumns(columns);
 
-      if (!options?.onlyColumns) {
-        response.results.dataSource =
-          dataSource && translateDataSource(dataSource);
+      if (!options?.onlyColumns && dataSource) {
+        response.results.dataSource = translateDataSource(dataSource);
       }
     }
 
