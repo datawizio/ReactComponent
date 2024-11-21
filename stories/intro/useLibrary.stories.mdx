@@ -1,37 +1,48 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 
-<Meta title="Intro/Использование библиотеки" />
+<Meta title="Intro/Using the library" />
 
-# Использование библиотеки
 
-Библиотека находится в репозитории
-https://github.com/datawizio/react-components.
+# Using the library
 
-Библиотека выгружена в GitHub Package и её можно подключать с помощью npm.
+The library can be found in the repository: https://github.com/datawizio/react-components.
 
-## Подлючение библиотеку
+It is published as a GitHub Package and can be installed using npm.
 
-Чтобы подлючить необходимо выполнить шаги:
-[Installing a package](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#installing-a-package)
+## Installing the library
 
-В нашем случае:
+To install the library, follow the steps outlined in the [Installing a package](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#installing-a-package) guide.
 
-- `OWNER` - datawizio
-- `Package name` - @datawizio/react-components
+### Steps:
+1. Set up your project for using GitHub Packages.
+2. Add the library to your project dependencies using the command:
+```bash
+npm install @datawizio/react-components
+```
 
-## Публикация библиотеку
+## Publishing
 
-Чтобы опубликовать необходимо выполнить шаги:
-[Publishing a package](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#publishing-a-package)
+To publish a new version of the library, follow the steps described in [Publishing a package](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#publishing-a-package).
 
-В нашем случае:
+For our specific case:
 
-- `OWNER` - datawizio
-- `Package name` - @datawizio/react-components
+- **OWNER**: `datawizio`
+- **Package name**: `@datawizio/react-components`
 
-## Пример .npmrc файла
+### Steps:
+1. Ensure that your `.npmrc` file is properly configured for GitHub Packages.
+2. Run the command to publish the package:
+```bash
+npm publish
+```
 
-```code highlight-line="2"
+## Example `.npmrc` file
+
+```bash
 //npm.pkg.github.com/:_authToken={TOKEN}
 registry=https://npm.pkg.github.com/datawizio
 ```
+
+Make sure to replace `{TOKEN}` with your GitHub authentication token. This configuration ensures that npm can access the GitHub Packages registry correctly.
+
+> **Tip:** For seamless integration and updates, ensure that your project's versioning follows semantic versioning guidelines. This will make it easier to manage versions and updates within your projects.
