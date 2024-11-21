@@ -17,7 +17,14 @@ export const translateObjects = <T>(
 };
 
 interface TranslateTableResponseOptions {
+  /** Translate only column's header */
   onlyColumns?: boolean;
+
+  /**
+   * List of column keys to be translated.
+   * If not provided, all columns will be translated.
+   */
+  columnsToTranslate?: string[];
 }
 
 export function translateTableResponse(
@@ -35,7 +42,7 @@ export function translateTableResponse(
       response.results.columns = columns && translateColumns(columns);
 
       if (!options?.onlyColumns && dataSource) {
-        response.results.dataSource = translateDataSource(dataSource);
+        response.results.dataSource = translateDataSource(dataSource, options);
       }
     }
 
@@ -72,9 +79,20 @@ export function translateColumns(columns: Array<IColumn>) {
   });
 }
 
-export function translateDataSource(dataSource: Array<IRow>): any {
+export function translateDataSource(
+  dataSource: Array<IRow>,
+  options?: TranslateTableResponseOptions
+) {
   return [...dataSource].map(row => {
-    return Object.entries(row).reduce(
+    let filteredRow = Object.entries(row);
+
+    if (options?.columnsToTranslate?.length) {
+      filteredRow = filteredRow.filter(([dataIndex, _]) => {
+        return options.columnsToTranslate.includes(dataIndex);
+      });
+    }
+
+    return filteredRow.reduce(
       (acc, [dataIndex, cell]: any) => {
         if (Array.isArray(cell)) {
           if (dataIndex === "children") {
