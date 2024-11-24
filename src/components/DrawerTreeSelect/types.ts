@@ -63,6 +63,8 @@ export interface DrawerTreeSelectProps<VT>
 
   showSelectAll?: boolean;
 
+  selectAllUponLevelChange?: boolean;
+
   selectAllText?: string;
 
   onCheckedDependentValue?: (
