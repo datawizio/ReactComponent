@@ -21,10 +21,10 @@ import { DataNode } from "rc-tree-select/es/interface";
 import { useDrawerTreeSelect } from "./useDrawerTreeSelect";
 import ConfigContext from "../ConfigProvider/context";
 import { Markers } from "./Markers";
-import "./index.less";
 import Switch from "../Switch";
 import i18next from "i18next";
 import { SwitchChangeEventHandler } from "antd/lib/switch";
+import "./index.less";
 
 /**********************************************************************************************************************/
 
@@ -116,6 +116,7 @@ const DrawerTreeSelect: FCDrawerTreeSelect<SelectValue> = ({
   remoteSearch,
   loading,
   showSelectAll: propsShowSelectAll,
+  selectAllUponLevelChange = true,
   emptyIsAll,
   placeholder,
   maxSelected,
@@ -328,7 +329,7 @@ const DrawerTreeSelect: FCDrawerTreeSelect<SelectValue> = ({
         let forceSelectAll = false;
 
         if (markersChanged.current || levelChanged.current) {
-          forceSelectAll = true;
+          forceSelectAll = !!selectAllUponLevelChange;
           // clear internal value if all markers removed
           if (!markersSelected.current?.length) {
             newState.internalValue = [];
