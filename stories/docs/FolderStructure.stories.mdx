@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Component Folder Structure" />
+
+# Component Folder Structure
+
+In the **Datawiz React Components Library**, each component is organized into its own dedicated folder. 
+This structure groups all relevant files together, making it easier to develop, test, and maintain components over time. 
+Below is the recommended folder structure for every component in the library:
+
+```
+ComponentName/
+├── index.tsx           # Implementation of the component
+├── index.less          # Custom styles
+├── index.stories.mdx   # Storybook documentation showing the component usage
+├── index.test.tsx      # Unit tests
+└── types.ts            # Type definitions
+```
+
+---
+
+### **index.tsx**
+This file contains the component's implementation and acts as its entry point. 
+It exports the primary component, ensuring that importing 
+the component elsewhere in the project is both straightforward and consistent. 
+Any component-specific logic, markup, and hooks should also reside here.
+
+### **index.less**
+The `index.less` file handles the styling for the component. 
+While most components will rely heavily on Ant Design's existing styles, 
+this file is the place to define custom styles when necessary. 
+Keep styles modular and focused to avoid unnecessary overrides.
+
+### **index.stories.mdx**
+This file provides Storybook documentation for the component. 
+It includes examples of how to use the component, details its available props, and demonstrates various use cases. 
+This documentation is crucial for ensuring that developers across the team or company can quickly understand 
+and integrate the component into their work.
+
+### **index.test.tsx**
+Testing is a core part of ensuring component reliability. 
+The `index.test.tsx` file contains unit tests for the component, 
+validating its functionality and catching edge cases. Using tools like Jest, 
+you can ensure that the component behaves as expected in different scenarios.
+
+### **types.ts**
+The `types.ts` file defines all TypeScript types and interfaces related to the component. 
+For example, it typically includes the interface for the component's props. 
+This file ensures that the component is strongly typed, reducing runtime errors and improving development efficiency.
+
+
+---
+
+### **Why This Structure?**
+This folder structure is designed for modularity and scalability. 
+By grouping all component-related files together, 
+it becomes easier to manage individual components as the library grows. 
+It also reduces confusion for new developers joining the project, 
+as every component follows the same predictable format. 
+Additionally, having dedicated files for tests, types, and stories encourages best practices like strong typing, 
+thorough testing, and comprehensive documentation.
