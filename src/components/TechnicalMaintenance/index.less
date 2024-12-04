@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.maintenance-container {
+  padding: 16px 24px 16px 16px;
+  background-color: @primary-light-color;
+  position: relative;
+
+  p {
+    font-size: 14px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &-close-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px
+  }
+}
+
+.rtl {
+  .maintenance-container {
+    padding: 16px 16px 16px 24px;
+
+    &-close-btn {
+      right: unset !important;
+      left: 8px !important;
+    }
+  }
+}
