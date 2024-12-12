@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppLoader component Render AppLoader correctly 1`] = `
+exports[`AppLoader component is rendered correctly 1`] = `
 <AppLoader
-  imageSrc="mockImg"
+  imageSrc="https://bi.datawiz.io/static/images/logo.svg"
 >
   <div
     className="loader"
@@ -21,7 +21,7 @@ exports[`AppLoader component Render AppLoader correctly 1`] = `
           >
             <img
               alt="loader"
-              src="mockImg"
+              src="https://bi.datawiz.io/static/images/logo.svg"
             />
           </div>
         </div>

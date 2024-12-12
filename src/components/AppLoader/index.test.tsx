@@ -5,26 +5,29 @@ import { mount } from "enzyme";
 import AppLoader from "./index";
 
 const mockProps = {
-  imageSrc: "mockImg"
+  imageSrc: "https://bi.datawiz.io/static/images/logo.svg"
 };
 
-const setUp = (props?) => mount(<AppLoader {...props} />);
+const setUp = (props?: React.ComponentProps<typeof AppLoader>) => {
+  return mount(<AppLoader {...props} />);
+};
 
 describe("AppLoader component", () => {
-  let component;
+  let component: ReturnType<typeof setUp>;
+
   beforeEach(() => {
     component = setUp(mockProps);
   });
 
-  it("Render AppLoader correctly", () => {
+  it("is rendered correctly", () => {
     expect(component).toMatchSnapshot();
   });
 
-  it("AppLoader has correct class", () => {
+  it("has the correct class", () => {
     expect(component.find(".loader").length).toBeTruthy();
   });
 
-  it("AppLoader has correct img", () => {
+  it("has the correct image", () => {
     expect(component.find("img").props().src).toBe(mockProps.imageSrc);
   });
 });

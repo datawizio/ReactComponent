@@ -1,20 +1,18 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Preview, ArgsTable } from "@storybook/addon-docs/blocks";
 import AppLoader from "./index";
 
 <Meta title="Components/AppLoader" component={AppLoader} />
 
-# Button
+# AppLoader
 
-Компонент `AppLoader`.
-
-## Overview
+The `AppLoader` component displays a loading indicator with an image, typically used while initializing the application.
 
 <Preview>
   <Story name="Basic">
-    <AppLoader imageSrc="https://admin-console-test.datawiz.io/static/images/logo.svg" />
+    <AppLoader imageSrc="https://bi.datawiz.io/static/images/logo.svg" />
   </Story>
 </Preview>
 
 ## Props
 
-<Props of={AppLoader} />
+<ArgsTable of={AppLoader} />
