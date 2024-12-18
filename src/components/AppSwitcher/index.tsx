@@ -1,10 +1,10 @@
+import clsx from "clsx";
 import React, { useContext, useMemo } from "react";
 import { Col, Dropdown, Row, Typography } from "antd";
 import Icon from "@ant-design/icons";
+import ConfigContext from "../ConfigProvider/context";
 
 import "./index.less";
-import ConfigContext from "../ConfigProvider/context";
-import clsx from "clsx";
 
 export interface IApplication {
   app_id: number | string;
@@ -49,7 +49,9 @@ const App: React.FC<
         <Typography.Paragraph>
           {is_main ? translate("HOME") : name}
         </Typography.Paragraph>
-        <Typography.Paragraph>{translate(bento_menu_description)}</Typography.Paragraph>
+        <Typography.Paragraph>
+          {translate(bento_menu_description)}
+        </Typography.Paragraph>
       </div>
     </Col>
   );

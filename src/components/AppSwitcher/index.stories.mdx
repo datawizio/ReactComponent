@@ -1,80 +1,77 @@
-import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Preview, ArgsTable } from "@storybook/addon-docs/blocks";
 import AppSwitcher from "./index";
 
 <Meta title="Components/AppSwitcher" component={AppSwitcher} />
 
 # AppSwitcher
 
-Компонент `AppSwitcher`
-
-## Overview
+AppSwitcher is a component that displays a dropdown menu of available applications for navigation. 
+It supports light and dark themes.
 
 export const applications = [
   {
-    "app_id": 36,
-    "name": "Головна",
-    "icon":
-      "https://media.datawiz.io/datawiz-bucket/application_icons/Builder_small_dark.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=849d426ab888f84eb3d3ecd096e69040c5ea6944864107b51bf057bca42bd9ce",
-    "dark_icon":
-      "https://media.datawiz.io/datawiz-bucket/application_dark_icons/Builder_small.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=59a7fb11a64f45ac6295f383f4cb64b1ae81109a1e057692dc7dc5daa975844a",
-    "host": "https://builder.datawiz.io",
-    "path": "/c/:client_id",
-    "bento_menu_description": "Всі можливості платформи",
-    "is_main": true
-  },
-  {
     "app_id": 30,
     "name": "PlanoHero",
-    "icon":
-      "https://media.datawiz.io/datawiz-bucket/application_icons/ICON_PLANOHERO_LIGHT_MODE.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6315fb86379d289bca4342fb94e32fe87339ee46a3356a1443019cff4ecebfbb",
-    "dark_icon":
-      "https://media.datawiz.io/datawiz-bucket/application_dark_icons/ICON_PLANOHERO_DARK_MODE.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=bfe93ab946efde875901640aff5534294e60f2ec7fb7d64c92dca1585dff19ee",
+    "icon": "/app-icons/ph-dark.png",
+    "dark_icon": "/app-icons/ph-light.png",
     "host": "https://planohero.datawiz.io",
     "path": "/c/:client_id",
-    "bento_menu_description": "Створення та впровадження планограм магазину",
-    "is_main": false
-  },
-  {
-    "app_id": 37,
-    "name": "Builder",
-    "icon":
-      "https://media.datawiz.io/datawiz-bucket/application_icons/Builder_small_dark.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=849d426ab888f84eb3d3ecd096e69040c5ea6944864107b51bf057bca42bd9ce",
-    "dark_icon":
-      "https://media.datawiz.io/datawiz-bucket/application_dark_icons/Builder_small.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=59a7fb11a64f45ac6295f383f4cb64b1ae81109a1e057692dc7dc5daa975844a",
-    "host": "https://builder.datawiz.io",
-    "path": "/c/:client_id",
-    "bento_menu_description":
-      "Аналітика даних продажів мереж у різних розрізах",
+    "description": "BENTO_PH_DESCRIPTION",
+    "bento_menu_description": "BENTO_PH_DESCRIPTION",
     "is_main": false
   },
   {
     "app_id": 22,
-    "name": "AdminPanel",
-    "icon":
-      "https://media.datawiz.io/datawiz-bucket/application_icons/admin_panel_small_dark.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c7835e5f63fe1067222f69c5135fb8abdcd95e6e23a213e4604ec9e7258ad124",
-    "dark_icon":
-      "https://media.datawiz.io/datawiz-bucket/application_dark_icons/admin_panel_small.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=1c85a8f85ccc39c7596b0c6f7a1c7a6f0227d964663b6effcf7cd39c533dbdee",
+    "name": "Admin Panel",
+    "icon": "/app-icons/ap-dark.png",
+    "dark_icon": "/app-icons/ap-light.png",
     "host": "https://admin-panel.datawiz.io",
     "path": "/c/:client_id",
-    "bento_menu_description": "Налаштування користувачів, ролей, доступів",
+    "description": "BENTO_AP_DESCRIPTION",
+    "bento_menu_description": "BENTO_AP_DESCRIPTION",
     "is_main": false
   },
   {
     "app_id": 32,
-    "name": "DataConsole",
-    "icon":
-      "https://media.datawiz.io/datawiz-bucket/application_icons/data_panel_small_dark.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d6c367b97b960ecf79319515accc5035c4987cc5fba717c9e713205a502e2bbf",
-    "dark_icon":
-      "https://media.datawiz.io/datawiz-bucket/application_dark_icons/data_panel_small.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=datawiz%2F20240102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240102T142130Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0705c58260724986ac9504d4d40e6beb2a174f4976764b677e159832b421619d",
+    "name": "Data Console",
+    "icon": "/app-icons/dc-dark.png",
+    "dark_icon": "/app-icons/dc-light.png",
     "host": "https://data-console.datawiz.io",
     "path": "/c/:client_id",
-    "bento_menu_description": "Адміністрування даних мережі",
+    "description": "BENTO_DC_DESCRIPTION",
+    "bento_menu_description": "BENTO_DC_DESCRIPTION",
+    "is_main": false
+  },
+  {
+    "app_id": 29,
+    "name": "BES",
+    "icon": "/app-icons/bes-dark.png",
+    "dark_icon": "/app-icons/bes-light.png", 
+    "host": "https://bes.datawiz.io",
+    "path": null,
+    "description": "BENTO_MAIN_DESCRIPTION",
+    "bento_menu_description": "BENTO_MAIN_DESCRIPTION",
+    "is_main": true
+  },
+  {
+    "app_id": 51,
+    "name": "Connector",
+    "icon": "/app-icons/connector-light.png",
+    "dark_icon": "/app-icons/connector-dark.png",
+    "host": "https://connector.datawiz.io",
+    "path": "/c/:client_id",
+    "description": "UPLOAD_DATA",
+    "bento_menu_description": "UPLOAD_DATA",
     "is_main": false
   }
 ];
 
 <Preview>
   <Story name="Basic">
-    <AppSwitcher apps={applications} client="34" theme="light" />
+    <AppSwitcher apps={applications} client="123" theme="light" />
   </Story>
 </Preview>
+
+## Props
+
+<ArgsTable of={AppSwitcher} />

@@ -4,10 +4,6 @@ import clsx from "clsx";
 import "./index.less";
 
 export interface AppLoaderProps {
-  /**
-   * The source URL for the image
-   * that will be displayed within the loader component.
-   */
   imageSrc: string;
 }
 
