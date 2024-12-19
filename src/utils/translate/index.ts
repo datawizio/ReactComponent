@@ -63,7 +63,10 @@ export function translateColumns(
   return [...columns].map(column => {
     const nextColumn = { ...column };
 
-    if (options?.translateByCondition(column)) {
+    if (
+      !options?.translateByCondition ||
+      (options?.translateByCondition && options.translateByCondition(column))
+    ) {
       nextColumn.title = i18n.t(column.title as string);
     }
 
