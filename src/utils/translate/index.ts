@@ -25,6 +25,12 @@ interface TranslateTableResponseOptions {
    * If not provided, all columns will be translated.
    */
   columnsToTranslate?: string[];
+
+  /*
+   * An optional condition to determine whether a specific column
+   * should be translated during the translation process.
+   */
+  translateByCondition?: (column: IColumn) => boolean;
 }
 
 export function translateTableResponse(
@@ -39,7 +45,7 @@ export function translateTableResponse(
         results: { columns, dataSource }
       } = response;
 
-      response.results.columns = columns && translateColumns(columns);
+      response.results.columns = columns && translateColumns(columns, options);
 
       if (!options?.onlyColumns && dataSource) {
         response.results.dataSource = translateDataSource(dataSource, options);
@@ -50,13 +56,19 @@ export function translateTableResponse(
   };
 }
 
-export function translateColumns(columns: Array<IColumn>) {
+export function translateColumns(
+  columns: Array<IColumn>,
+  options?: TranslateTableResponseOptions
+) {
   return [...columns].map(column => {
     const nextColumn = { ...column };
-    nextColumn.title = i18n.t(column.title as string);
+
+    if (options?.translateByCondition(column)) {
+      nextColumn.title = i18n.t(column.title as string);
+    }
 
     if (column.children && column.children.length) {
-      nextColumn.children = translateColumns(column.children);
+      nextColumn.children = translateColumns(column.children, options);
     }
 
     if (column.filters) {
