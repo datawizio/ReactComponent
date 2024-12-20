@@ -26,7 +26,7 @@ export interface TableMenuProps extends ButtonProps {
     hideLoadingMessageFn?: () => void
   ) => Promise<BlobPart> | Promise<void> | null;
   exportHandlerCallback?: (fileData: BlobPart | Blob, filename: string) => any;
-  onSendClick?: (applyExpandTree?: boolean) => Promise<void>;
+  onSendClick?: (expand?: "horizontally" | "grouped") => Promise<void>;
   onTotalClick?: (e: any) => void;
   onExpandVertical?: (e: any) => void;
   onExpandHorizontal?: (e: any) => void;
@@ -191,7 +191,7 @@ const TableMenu: React.FC<TableMenuProps> = props => {
         </Menu.Item>
       )}
       {show_send_to_email &&
-        (is_visualization && !expand_horizontally && max_level > 1 ? (
+        (is_visualization && max_level > 1 ? (
           <Menu.SubMenu
             key="send_xlsx_submenu"
             title={
@@ -201,18 +201,28 @@ const TableMenu: React.FC<TableMenuProps> = props => {
               </>
             }
           >
-            <Menu.Item
-              key="apply_expand_tree"
-              onClick={() => onSendClick(true)}
-            >
-              {translate("APPLY_EXPAND_TREE")}
-            </Menu.Item>
-            <Menu.Item
-              key="without_expand_tree"
-              onClick={() => onSendClick(false)}
-            >
+            <Menu.Item key="without_expand_tree" onClick={() => onSendClick()}>
               {translate("WITHOUT_EXPAND_TREE")}
             </Menu.Item>
+            <Menu.SubMenu
+              key="send_xlsx_expand_submenu"
+              title={translate("APPLY_EXPAND_TREE")}
+            >
+              {!expand_horizontally && (
+                <Menu.Item
+                  key="expand_tree_horizontally"
+                  onClick={() => onSendClick("horizontally")}
+                >
+                  {translate("EXPAND_TREE_HORIZONTALLY")}
+                </Menu.Item>
+              )}
+              <Menu.Item
+                key="expand_tree_grouped"
+                onClick={() => onSendClick("grouped")}
+              >
+                {translate("EXPAND_TREE_GROUPED")}
+              </Menu.Item>
+            </Menu.SubMenu>
           </Menu.SubMenu>
         ) : (
           <Menu.Item
