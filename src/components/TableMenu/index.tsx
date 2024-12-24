@@ -137,7 +137,7 @@ const TableMenu: React.FC<TableMenuProps> = props => {
         void handleExport();
         break;
       case "send_xlsx":
-        void onSendClick(expand_horizontally);
+        void onSendClick(expand_horizontally ? "horizontally" : undefined);
         break;
       default:
         break;
