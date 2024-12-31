@@ -4,9 +4,9 @@ import { Breadcrumb as AntBreadcrumb } from "antd";
 import { BreadcrumbProps as AntBreadcrumbProps } from "antd/lib/breadcrumb";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
-import "./index.less";
-import { useContext } from "react";
 import ConfigContext from "../ConfigProvider/context";
+
+import "./index.less";
 
 export interface BreadcrumbProps extends AntBreadcrumbProps {}
 
@@ -18,8 +18,12 @@ export interface FCBreadcrumb extends FCBreadcrumbProps {
 }
 
 const Breadcrumb: FCBreadcrumb = ({ separator, ...props }) => {
-  const { direction } = useContext(ConfigContext);
-  if (!separator) separator = direction === "rtl" ? <LeftOutlined /> : <RightOutlined />;
+  const { direction } = React.useContext(ConfigContext);
+
+  if (!separator) {
+    separator = direction === "rtl" ? <LeftOutlined /> : <RightOutlined />;
+  }
+
   return (
     <AntBreadcrumb className="dw-breadcrumb" separator={separator} {...props} />
   );

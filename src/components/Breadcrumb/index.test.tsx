@@ -1,31 +1,60 @@
 import "jsdom-global/register";
+import "@testing-library/jest-dom";
+
 import React from "react";
-import { mount } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 import Breadcrumb from "./index";
+import ConfigContext from "../ConfigProvider/context";
 
 const mockProps = {
-  className: "customClassName"
+  className: "custom-class-name"
 };
 
-const setUp = (props?) => mount(<Breadcrumb {...props} />);
-
 describe("Breadcrumb component", () => {
-  let component;
-  beforeEach(() => {
-    component = setUp(mockProps);
+  it("is rendered correctly and matches snapshot", () => {
+    const { container } = render(
+      <Breadcrumb {...mockProps}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>About</Breadcrumb.Item>
+      </Breadcrumb>
+    );
+    expect(container).toMatchSnapshot();
   });
 
-  it("Breadcrumb rendered correctly", () => {
-    expect(component).toMatchSnapshot();
+  it("is rendered with the correct separator", () => {
+    render(
+      <Breadcrumb {...mockProps} separator=">">
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>About</Breadcrumb.Item>
+      </Breadcrumb>
+    );
+    const separator = screen.getAllByText(">")[0];
+    expect(separator).toBeInTheDocument();
   });
 
-  it("Breadcrumb with  correct separator", () => {
-    const wrapper = setUp({ ...mockProps, separator: ">" });
-    expect(wrapper.props().separator).toBe(">");
+  it("applies the correct class name", () => {
+    const { container } = render(
+      <Breadcrumb {...mockProps}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+      </Breadcrumb>
+    );
+    const breadcrumb = container.querySelector(`.${mockProps.className}`);
+    expect(breadcrumb).toBeInTheDocument();
   });
 
-  it("Breadcrumb get correct className", () => {
-    expect(component.find(`.${mockProps.className}`).length).toBeTruthy();
+  it("renders the correct separator based on RTL context", () => {
+    const mockContextValue = { direction: "rtl" } as const;
+
+    render(
+      <ConfigContext.Provider value={mockContextValue}>
+        <Breadcrumb>
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+        </Breadcrumb>
+      </ConfigContext.Provider>
+    );
+
+    // Assuming the LeftOutlined icon has an `aria-label` of "left".
+    expect(screen.getByLabelText("left")).toBeInTheDocument();
   });
 });

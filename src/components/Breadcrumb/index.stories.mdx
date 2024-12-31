@@ -1,41 +1,68 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { PieChartOutlined, DesktopOutlined, ContainerOutlined } from "@ant-design/icons";
+
 import Breadcrumb from "./index";
-import { BreadcrumbWithProps } from "./story/helper";
 
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  select
-} from "@storybook/addon-knobs";
-
-import {
-  PieChartOutlined,
-  DesktopOutlined,
-  ContainerOutlined
-} from "@ant-design/icons";
+export const breadcrumbWithIconStyles = {
+  display: "inline-flex", 
+  alignItems: "baseline", 
+  gap: 5
+};
 
 <Meta title="Components/Breadcrumb" component={Breadcrumb} />
 
 # Breadcrumb
 
-Компонент `Breadcrumb`. Базовый компонент:
-[**antd/breadcrumb**](https://ant.design/components/breadcrumb/).
+The `Breadcrumb` component provides a way to display a breadcrumb navigation system.  
+It is based on the [**Ant Design Breadcrumb**](https://ant.design/components/breadcrumb/) component.
 
 ## Basic
 
 <Preview>
   <Story name="Basic">
     <Breadcrumb>
-      <Breadcrumb.Item>Title</Breadcrumb.Item>
-      <Breadcrumb.Item>Title</Breadcrumb.Item>
+      <Breadcrumb.Item>Home</Breadcrumb.Item>
+      <Breadcrumb.Item>Category</Breadcrumb.Item>
+      <Breadcrumb.Item>Item</Breadcrumb.Item>
+    </Breadcrumb>
+  </Story>
+</Preview>
+
+## With Custom Separator
+
+<Preview>
+  <Story name="With Custom Separator">
+    <Breadcrumb separator="/">
+      <Breadcrumb.Item>Home</Breadcrumb.Item>
+      <Breadcrumb.Item>Category</Breadcrumb.Item>
+      <Breadcrumb.Item>Item</Breadcrumb.Item>
+    </Breadcrumb>
+  </Story>
+</Preview>
+
+## With Icons
+
+<Preview>
+  <Story name="With Icons">
+    <Breadcrumb>
+      <Breadcrumb.Item style={breadcrumbWithIconStyles}>
+        <PieChartOutlined />
+        <span>Dashboard</span>
+      </Breadcrumb.Item>
+      
+      <Breadcrumb.Item style={breadcrumbWithIconStyles}>
+        <DesktopOutlined />
+        <span>Workspace</span>
+      </Breadcrumb.Item>
+      
+      <Breadcrumb.Item style={breadcrumbWithIconStyles}>
+        <ContainerOutlined />
+        <span>Projects</span>
+      </Breadcrumb.Item>
     </Breadcrumb>
   </Story>
 </Preview>
 
 ## Props
 
-- [**antd/breabcrumb**](https://ant.design/components/breabcrumb/#API)
-
-<Props of={BreadcrumbWithProps} />
+The `Breadcrumb` component accepts all the props of the [**Ant Design Breadcrumb**](https://ant.design/components/breadcrumb/#API).
