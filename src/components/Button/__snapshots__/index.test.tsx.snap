@@ -1,40 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button component Render button correctly 1`] = `
-<Button
-  border={false}
-  className="customClassName"
->
-  <Button
-    className="dw-btn customClassName no-border"
+exports[`Button component is rendered correctly and matches snapshot 1`] = `
+<div>
+  <button
+    class="ant-btn dw-btn custom-class-name no-border"
+    type="button"
   >
-    <Wave>
-      <button
-        className="ant-btn dw-btn customClassName no-border"
-        onClick={[Function]}
-        type="button"
-      >
-        <LoadingIcon
-          existIcon={false}
-          loading={false}
-          prefixCls="ant-btn"
-        >
-          <CSSMotion
-            motionName="ant-btn-loading-icon-motion"
-            onAppearActive={[Function]}
-            onAppearStart={[Function]}
-            onEnterActive={[Function]}
-            onEnterStart={[Function]}
-            onLeaveActive={[Function]}
-            onLeaveStart={[Function]}
-            removeOnLeave={true}
-            visible={false}
-          >
-            <DomWrapper />
-          </CSSMotion>
-        </LoadingIcon>
-      </button>
-    </Wave>
-  </Button>
-</Button>
+    <span>
+      Click me
+    </span>
+  </button>
+</div>
 `;

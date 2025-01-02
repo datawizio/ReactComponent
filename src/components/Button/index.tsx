@@ -8,9 +8,10 @@ import clsx from "clsx";
 import "./index.less";
 
 export interface ButtonProps extends AntButtonProps {
-  /** Отображать кнопку с границей или без */
+  /** Display a border around the button */
   border?: boolean;
 
+  /** Highlight the button */
   highlight?: boolean;
 }
 

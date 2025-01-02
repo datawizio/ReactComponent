@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Preview, ArgsTable } from "@storybook/addon-docs/blocks";
 import Button from "./index";
 import { SearchOutlined } from "@ant-design/icons";
 
@@ -6,8 +6,7 @@ import { SearchOutlined } from "@ant-design/icons";
 
 # Button
 
-Компонент `Button`. Базовый компонент:
-[**antd/button**](https://ant.design/components/button/).
+The `Button` component is a versatile and customizable button based on the [**Ant Design Button**](https://ant.design/components/button/).
 
 ## Overview
 
@@ -76,7 +75,7 @@ import { SearchOutlined } from "@ant-design/icons";
   </div>
 </Preview>
 
-## Рrimary
+## Primary
 
 <Preview>
   <Story name="Primary">
@@ -222,6 +221,6 @@ import { SearchOutlined } from "@ant-design/icons";
 
 ## Props
 
-- [**antd/button**](https://ant.design/components/button/#API)
+The `Button` component accepts all the props of the [**Ant Design Button**](https://ant.design/components/button/#API) with some additional custom props.
 
-<Props of={Button} />
+<ArgsTable of={Button} />

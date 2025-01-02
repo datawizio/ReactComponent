@@ -1,40 +1,52 @@
 import "jsdom-global/register";
+import "@testing-library/jest-dom";
+
 import React from "react";
-import { mount } from "enzyme";
+import { render, screen } from "@testing-library/react";
 
 import Button from "./index";
 
 const mockProps = {
   border: false,
-  className: "customClassName"
+  className: "custom-class-name"
 };
 
-const setUp = (props?) => mount(<Button {...props} />);
-
 describe("Button component", () => {
-  let component;
-  beforeEach(() => {
-    component = setUp(mockProps);
+  it("is rendered correctly and matches snapshot", () => {
+    const { container } = render(<Button {...mockProps}>Click me</Button>);
+    expect(container).toMatchSnapshot();
   });
 
-  it("Render button correctly", () => {
-    expect(component).toMatchSnapshot();
+  it("has the correct base class", () => {
+    render(<Button {...mockProps}>Click me</Button>);
+    const button = screen.getByRole("button");
+    expect(button).toHaveClass("dw-btn");
   });
 
-  it("Button has correct class", () => {
-    expect(component.find(".dw-btn").length).toBeTruthy();
+  it("is rendered without border and applies the correct class", () => {
+    render(<Button {...mockProps}>Click me</Button>);
+    const button = screen.getByRole("button");
+    expect(button).toHaveClass("no-border");
   });
 
-  it("Button without border has correct class", () => {
-    expect(component.find(".no-border").length).toBeTruthy();
+  it("is rendered with border and does not have the no-border class", () => {
+    render(
+      <Button {...mockProps} border={true}>
+        Click me
+      </Button>
+    );
+    const button = screen.getByRole("button");
+    expect(button).not.toHaveClass("no-border");
   });
 
-  it("Button bordered has correct class", () => {
-    const wrapper = setUp({ ...mockProps, border: true });
-    expect(wrapper.find(".no-border").length).toBeFalsy();
+  it("applies the correct custom class name", () => {
+    render(<Button {...mockProps}>Click me</Button>);
+    const button = screen.getByRole("button");
+    expect(button).toHaveClass(mockProps.className);
   });
 
-  it("Button get correct className", () => {
-    expect(component.find(`.${mockProps.className}`).length).toBeTruthy();
+  it("renders button text correctly", () => {
+    render(<Button {...mockProps}>Click me</Button>);
+    expect(screen.getByText("Click me")).toBeInTheDocument();
   });
 });
