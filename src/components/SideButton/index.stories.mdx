@@ -1,85 +1,87 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, ArgsTable } from "@storybook/addon-docs/blocks";
 import { SearchOutlined } from "@ant-design/icons";
-import SideButton from "./";
+
+import SideButton from "./index";
 
 <Meta title="Components/Buttons/SideButton" component={SideButton} />
 
 # SideButton
 
-Компонент `SideButton`.
+The `SideButton` component is used to create buttons that are positioned on the sides.
 
-## Basic
+<Story name="Basic">
+  <div>
+    <SideButton
+      className="basic-side-button"
+      style={{ top: 50 }}
+      type="primary"
+      icon={<SearchOutlined />}
+      text="primary"
+    />
+    <SideButton
+      className="basic-side-button"
+      style={{ top: 100 }}
+      type="primary"
+      icon={<SearchOutlined />}
+      text="ghost"
+      ghost
+    />
+    <SideButton
+      className="basic-side-button"
+      style={{ top: 150 }}
+      type="default"
+      icon={<SearchOutlined />}
+      text="default"
+    />
+    <SideButton
+      className="basic-side-button"
+      style={{ top: 200 }}
+      type="dashed"
+      icon={<SearchOutlined />}
+      text="dashed"
+    />
+  </div>
+</Story>
 
-<Preview>
-  <Story name="Basic">
-    <div>
-      <SideButton
-        style={{ top: 50 }}
-        type="primary"
-        icon={<SearchOutlined />}
-        text="primary"
-      />
-      <SideButton
-        style={{ top: 100 }}
-        type="primary"
-        icon={<SearchOutlined />}
-        text="ghost"
-        ghost
-      />
-      <SideButton
-        style={{ top: 150 }}
-        type="default"
-        icon={<SearchOutlined />}
-        text="default"
-      />
-      <SideButton
-        style={{ top: 200 }}
-        type="dashed"
-        icon={<SearchOutlined />}
-        text="dashed"
-      />
-    </div>
-  </Story>
-</Preview>
 
-## Small
-
-<Preview>
-  <Story name="Small">
-    <div>
-      <SideButton
-        size="small"
-        style={{ top: 300 }}
-        type="primary"
-        icon={<SearchOutlined />}
-        text="primary"
-      />
-      <SideButton
-        size="small"
-        style={{ top: 350 }}
-        type="primary"
-        icon={<SearchOutlined />}
-        text="ghost"
-        ghost
-      />
-      <SideButton
-        size="small"
-        style={{ top: 400 }}
-        type="default"
-        icon={<SearchOutlined />}
-        text="default"
-      />
-      <SideButton
-        size="small"
-        style={{ top: 450 }}
-        type="dashed"
-        icon={<SearchOutlined />}
-        text="dashed"
-      />
-    </div>
-  </Story>
-</Preview>
+<Story name="Small">
+  <div>
+    <SideButton
+      className="small-side-button"
+      size="small"
+      style={{ top: 300 }}
+      type="primary"
+      icon={<SearchOutlined />}
+      text="primary"
+    />
+    <SideButton
+      className="small-side-button"
+      size="small"
+      style={{ top: 350 }}
+      type="primary"
+      icon={<SearchOutlined />}
+      text="ghost"
+      ghost
+    />
+    <SideButton
+      className="small-side-button"
+      size="small"
+      style={{ top: 400 }}
+      type="default"
+      icon={<SearchOutlined />}
+      text="default"
+    />
+    <SideButton
+      className="small-side-button"
+      size="small"
+      style={{ top: 450 }}
+      type="dashed"
+      icon={<SearchOutlined />}
+      text="dashed"
+    />
+  </div>
+</Story>
 
 ## Props
 
-<Props of={SideButton} />
+<ArgsTable of={SideButton} />

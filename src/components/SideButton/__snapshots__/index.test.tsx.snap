@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideButton component matches snapshot 1`] = `
+"<Portal containerInfo={{...}}>
+  <div style={[undefined]} className=\\"side-button-container side-button-container--right test-class\\">
+    <Button className=\\"side-button side-button--right\\" border={true}>
+      <span className=\\"side-button__icon\\">
+        <span>
+          Icon
+        </span>
+      </span>
+      <span className=\\"side-button__text\\">
+        Test Button
+      </span>
+    </Button>
+  </div>
+</Portal>"
+`;
