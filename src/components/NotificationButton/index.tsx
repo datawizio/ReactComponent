@@ -34,24 +34,24 @@ const NotificationButton: React.FC<NotificationButtonProps> = ({
   useEffect(() => {
     faviconBadge.value = 0;
     if (!useWS) return;
-    subscribe("unread-notifications", "notification-btn", data => {
-      const count =
-        data["payload"]["data"]["unreadNotificationsCount"]["count"];
+    subscribe("notifications-count", "notification-btn", data => {
+      const count = data["payload"]["data"]["notificationsCount"]["count"];
       setState(count);
       faviconBadge.value = count;
     });
 
     sendMessage({
-      "id": "unread-notifications",
+      "id": "notifications-count",
       "type": "subscribe",
       "payload": {
-        "query": "subscription { unreadNotificationsCount {count} }"
+        "query":
+          "subscription { notificationsCount(pageType: unread_page) {count} }"
       }
     });
 
     return () => {
-      sendMessage({ id: "unread-notifications", complete: true });
-      unsubscribe("unread-notifications", "notification-btn");
+      sendMessage({ id: "notifications-count", complete: true });
+      unsubscribe("notifications-count", "notification-btn");
     };
   }, [useWS]);
 
