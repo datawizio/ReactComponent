@@ -1,0 +1,49 @@
+.rule-info-section {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 24px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &-name {
+    font-weight: 600;
+  }
+
+  &.rule-dimension .rule-info-section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .show-all-modal-button {
+      padding: 0;
+      line-height: 1;
+      height: 1rem;
+    }
+  }
+
+  &.rule-filters .rule-info-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .filter-tag {
+      display: inline-block;
+      border-radius: 5px;
+      padding: 3px 8px;
+
+      @tag-colors: #199605 #ecfdec, #393939 #f8f8f8, #4a72ff #f2f5ff,
+        #ffa73f #fff7e2;
+
+      each(@tag-colors, {
+        &[data-key="@{index}"] {
+          color: extract(@value, 1);
+          background-color: extract(@value, 2);
+        }
+      });
+
+      .card-header-info-label {
+        padding-right: 5px;
+        font-weight: 600;
+      }
+    }
+  }
+}
