@@ -162,7 +162,9 @@ export { ForbiddenIcon } from "./components/Icons/ForbiddenIcon";
 
 export { default as Cron } from "./components/Cron/";
 
-export { default as NotificationButton } from "./components/NotificationButton/";
+export { default as NotificationButton } from "./components/NotificationButton";
+
+export { default as NotificationsList } from "./components/NotificationsList";
 
 export { default as ExpandButton } from "./components/ExpandButton";
 

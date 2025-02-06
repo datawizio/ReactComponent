@@ -44,7 +44,7 @@ const RuleInfoTable: React.FC<RuleInfoTableProps> = React.memo(
             className="show-all-modal-button"
             onClick={onShowAllClick}
           >
-            {t("SHOW_ALL")}
+            {t("SHOW_RESULTS")}
           </Button>
         </RuleInfoTableSection>
 
