@@ -1,0 +1,19 @@
+@import "../../../../styles/variables.less";
+
+div.notifications-actions {
+  & > button.dw-btn > span:not(.anticon) {
+    color: @drawer-selected-text-color;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .ant-btn {
+    margin-left: 8px;
+
+    svg {
+      height: 14px;
+    }
+  }
+}

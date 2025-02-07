@@ -1,12 +1,12 @@
 import React from "react";
 
-import Checkbox from "../../Checkbox";
+import Checkbox from "../../../Checkbox";
 import { Button } from "antd";
 
 import { useTranslation } from "react-i18next";
 import { CheckboxChangeEvent } from "antd/es/checkbox";
 
-import "./Header.less";
+import "./index.less";
 
 interface ListHeaderProps {
   checkedCount: number;

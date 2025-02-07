@@ -53,3 +53,5 @@ export type Action<T> =
   | { type: "reload" }
   | { type: "loading"; payload: boolean }
   | { type: "setChecked"; payload: string[] };
+
+export type NotificationPageType = "unread_page" | "deleted_page" | null;
