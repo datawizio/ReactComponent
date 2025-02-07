@@ -1,27 +1,26 @@
 import React, { useContext } from "react";
-import Button from "../../../Button";
+import Button from "../Button";
 import { useTranslation } from "react-i18next";
 
 import { UndoOutlined } from "@ant-design/icons";
-import { EnvelopeIcon } from "../../../Icons/EnvelopeIcon";
-import { DeleteIcon } from "../../../Icons/DeleteIcon";
-import { MailIcon } from "../../../Icons/MailIcon";
+import { EnvelopeIcon } from "../Icons/EnvelopeIcon";
+import { DeleteIcon } from "../Icons/DeleteIcon";
+import { MailIcon } from "../Icons/MailIcon";
 
-import { NotificationsListContext } from "../../context";
-import { NotificationPageType } from "../../types";
+import { NotificationsListContext } from "../NotificationsList/context";
+import {
+  NotificationActions,
+  NotificationPageType
+} from "../NotificationsList/types";
 
 import "./index.less";
 
-interface ListActionsProps {
+interface ListActionsProps extends Omit<NotificationActions, "onOpenLink"> {
   pageType?: NotificationPageType;
-  onMarkRead: () => void;
-  onMarkUnread: () => void;
-  onRestore: () => void;
-  onDelete: () => void;
 }
 
-export const ListActions: React.FC<ListActionsProps> = React.memo(
-  ({ pageType, onMarkRead, onMarkUnread, onRestore, onDelete }) => {
+const ListActions: React.FC<ListActionsProps> = React.memo(
+  ({ pageType, onMarkAsRead, onMarkAsUnread, onRestore, onDelete }) => {
     const { t } = useTranslation();
     const { state } = useContext(NotificationsListContext);
 
@@ -35,12 +34,12 @@ export const ListActions: React.FC<ListActionsProps> = React.memo(
     return state?.checkedKeys && state?.checkedKeys.size > 0 ? (
       <div className="notifications-actions">
         {isSomeUnread && (
-          <Button onClick={onMarkRead} type="link" icon={<EnvelopeIcon />}>
+          <Button onClick={onMarkAsRead} type="link" icon={<EnvelopeIcon />}>
             {t("MARK_AS_READ")}
           </Button>
         )}
         {isSomeRead && (
-          <Button onClick={onMarkUnread} type="link" icon={<MailIcon />}>
+          <Button onClick={onMarkAsUnread} type="link" icon={<MailIcon />}>
             {t("MARK_AS_UNREAD")}
           </Button>
         )}
@@ -60,3 +59,5 @@ export const ListActions: React.FC<ListActionsProps> = React.memo(
 ListActions.defaultProps = {
   pageType: null
 };
+
+export default ListActions;

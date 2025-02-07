@@ -54,4 +54,39 @@ export type Action<T> =
   | { type: "loading"; payload: boolean }
   | { type: "setChecked"; payload: string[] };
 
+// Notification
+
+export interface INotification extends IListItem {
+  read: boolean;
+  archive: boolean;
+  description: string;
+  message: string;
+  createdAt: string;
+  dtype: string;
+  clientId: string;
+  conf: {
+    app_id: number;
+    dashboard_id: string;
+    widget_id: string;
+    text: string;
+    rule: any;
+    rule_id: number;
+    rule_name: string;
+    rule_names: string[];
+    report_name?: string;
+    date_from?: string;
+    days_count?: number;
+    media_name?: string;
+    thumbnail?: string;
+  };
+}
+
+export interface NotificationActions {
+  onOpenLink?: (e: React.MouseEvent<HTMLElement>) => void;
+  onDelete?: (e: React.MouseEvent<HTMLElement>) => void;
+  onRestore?: (e: React.MouseEvent<HTMLElement>) => void;
+  onMarkAsRead?: (e: React.MouseEvent<HTMLElement>) => void;
+  onMarkAsUnread?: (e: React.MouseEvent<HTMLElement>) => void;
+}
+
 export type NotificationPageType = "unread_page" | "deleted_page" | null;

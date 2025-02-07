@@ -166,6 +166,12 @@ export { default as NotificationButton } from "./components/NotificationButton";
 
 export { default as NotificationsList } from "./components/NotificationsList";
 
+export { default as NotificationsListItem } from "./components/NotificationsListItem";
+
+export { default as NotificationsListActions } from "./components/NotificationsListActions";
+
+export { default as NotificationsListItemActions } from "./components/NotificationsListItemActions";
+
 export { default as ExpandButton } from "./components/ExpandButton";
 
 export { default as ListInfo } from "./components/ListInfo";
