@@ -1,5 +1,3 @@
-import i18next from "i18next";
-
 export interface IUser {
   full_name: string;
   email: string;
@@ -33,21 +31,21 @@ export function initChat({
   client?: string;
   clients?: IClient[];
 }) {
-  window.$crisp = [
-    ["set", "user:email", user.email],
-    ["set", "user:nickname", user.full_name],
-    ["set", "user:avatar", user.photo],
-    ["safe", true]
-  ];
-  if (client) {
-    window.$crisp.push(["set", "session:data", [[["Client", client]]]]);
-  }
-  if (clients) {
-    window.$crisp.push([
-      "set",
-      "session:data",
-      [[["Clients", clients.map(client => client.name).join(", ")]]]
-    ]);
+  if (window.$crisp) {
+    window.$crisp.push(["set", "user:email", user.email]);
+    window.$crisp.push(["set", "user:nickname", user.full_name]);
+    window.$crisp.push(["set", "user:avatar", user.photo]);
+    window.$crisp.push(["safe", true]);
+    if (client) {
+      window.$crisp.push(["set", "session:data", [[["Client", client]]]]);
+    }
+    if (clients) {
+      window.$crisp.push([
+        "set",
+        "session:data",
+        [[["Clients", clients.map(client => client.name).join(", ")]]]
+      ]);
+    }
   }
   window.CRISP_RUNTIME_CONFIG = {
     locale: lang
