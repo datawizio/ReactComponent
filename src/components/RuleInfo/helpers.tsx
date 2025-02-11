@@ -71,6 +71,8 @@ export function getDimensions<
   TDimension,
   TReturn extends TDimension extends any[] ? DimensionsType[] : DimensionsType
 >(dimension: TDimension, formatDateRange: formatDateRangeType): TReturn {
+  if (!dimension) return null;
+
   if (Array.isArray(dimension)) {
     return dimension.map(filter => ({
       displayName: `${i18next.t("FILTER")}: ${i18next.t(
@@ -80,6 +82,7 @@ export function getDimensions<
       values: getValue(filter, formatDateRange)
     })) as TReturn;
   }
+
   return {
     displayName: `${i18next.t("DIMENSION")}: ${i18next.t(
       dimension["name"].toUpperCase()
@@ -105,10 +108,13 @@ export function getCountValues<TDimension extends WidgetParams>(
   dimension.filters.forEach(
     d => (returnObj[d.name] = getValue(d, formatDateRange).length)
   );
-  returnObj[dimension.dimension.name] = getValue(
-    dimension.dimension,
-    formatDateRange
-  ).length;
+
+  if (dimension.dimension) {
+    returnObj[dimension.dimension.name] = getValue(
+      dimension.dimension,
+      formatDateRange
+    ).length;
+  }
 
   return returnObj;
 }

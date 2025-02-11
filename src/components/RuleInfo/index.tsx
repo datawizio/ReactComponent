@@ -31,15 +31,31 @@ const RuleInfo: React.FC<RuleInfoProps> = memo(
       <RuleInfoContext.Provider value={{ ruleInfoState: state, dispatch }}>
         <div className="rule-info">
           <div className="rule-info-title">{t("CONDITION")}</div>
-          <div>{parseLogic(logic)}</div>
-          <div className="rule-info-title">{t("DIMENSION")}</div>
-          <div>{parseDimension(widget_params.dimension, formatDateRange)}</div>
-          <div className="rule-info-title">{t("FILTERS")}</div>
-          <div>
-            {widget_params.filters.map(filter =>
-              parseDimension(filter, formatDateRange)
-            )}
-          </div>
+          {typeof logic === "string" ? (
+            <div>{logic}</div>
+          ) : (
+            <div>{parseLogic(logic)}</div>
+          )}
+
+          {!!widget_params.dimension && (
+            <>
+              <div className="rule-info-title">{t("DIMENSIONS")}</div>
+              <div>
+                {parseDimension(widget_params.dimension, formatDateRange)}
+              </div>
+            </>
+          )}
+
+          {!!widget_params.filters?.length && (
+            <>
+              <div className="rule-info-title">{t("FILTERS")}</div>
+              <div>
+                {widget_params.filters.map(filter =>
+                  parseDimension(filter, formatDateRange)
+                )}
+              </div>
+            </>
+          )}
         </div>
         <Modal
           title={name}
