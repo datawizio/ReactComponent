@@ -68,21 +68,22 @@ export const CollapseList: FC = () => {
   );
 
   const renderDimensionItems = useMemo(
-    () => (
-      <Collapse.Panel
-        key={dimensions.originalName}
-        extra={renderExtra(dimensions)}
-        header={<b>{dimensions.displayName}</b>}
-      >
-        {renderList(dimensions, "dimension")}
-      </Collapse.Panel>
-    ),
+    () =>
+      dimensions ? (
+        <Collapse.Panel
+          key={dimensions.originalName}
+          extra={renderExtra(dimensions)}
+          header={<b>{dimensions.displayName}</b>}
+        >
+          {renderList(dimensions, "dimension")}
+        </Collapse.Panel>
+      ) : null,
     [dimensions, renderExtra, renderList]
   );
 
   const renderFilterItems = useMemo(
     () =>
-      filters.map(filter => (
+      filters?.map(filter => (
         <Collapse.Panel
           key={filter.originalName}
           extra={renderExtra(filter)}
