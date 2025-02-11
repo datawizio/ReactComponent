@@ -33,6 +33,7 @@ export interface ListProps<T> extends Omit<AntListProps<T>, "renderItem"> {
   };
   groupListItems?: (item: Array<T>) => Array<T & { groupName?: string }>;
   nothingHereMessage?: React.ReactElement;
+  showActions?: boolean;
 }
 
 export interface ListState<T> extends ListProps<T> {

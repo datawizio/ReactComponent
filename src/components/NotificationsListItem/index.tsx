@@ -12,6 +12,7 @@ interface ListItemProps extends RenderItemProps<INotification> {
   onClick?: () => void;
   iconSrc?: string;
   actions?: React.ReactNode;
+  showCheckbox?: boolean;
   formatDate?: (date: string) => string;
 }
 
@@ -22,7 +23,8 @@ const ListItem: React.FC<ListItemProps> = ({
   onClick,
   iconSrc,
   formatDate,
-  actions
+  actions,
+  showCheckbox
 }) => {
   const { t } = useTranslation();
 
@@ -40,11 +42,13 @@ const ListItem: React.FC<ListItemProps> = ({
 
   return (
     <List.Item key={item.id} className={className} onClick={onClick}>
-      <Checkbox
-        onChange={onCheckChange.bind(null, item.id)}
-        onClick={e => e.stopPropagation()}
-        checked={checked}
-      />
+      {showCheckbox && (
+        <Checkbox
+          onChange={onCheckChange.bind(null, item.id)}
+          onClick={e => e.stopPropagation()}
+          checked={checked}
+        />
+      )}
 
       {iconSrc && <img src={iconSrc} alt={item.title} width={34} height={34} />}
 

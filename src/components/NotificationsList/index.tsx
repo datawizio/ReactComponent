@@ -48,20 +48,22 @@ const NotificationsList: React.FC<ListProps<IListItem>> = props => {
       <List
         className={`dw-list ${props.className}`}
         header={
-          <ListHeader
-            checkedCount={checkedAll ? total ?? 0 : checkedKeys.size}
-            total={total}
-            checkboxStatus={checkedAllOnPage}
-            onChecked={() => dispatch({ type: "checkAllOnPage" })}
-            onCheckAll={() => dispatch({ type: "checkAll" })}
-            actions={props.actions}
-          />
+          props.showActions ? (
+            <ListHeader
+              checkedCount={checkedAll ? total ?? 0 : checkedKeys.size}
+              total={total}
+              checkboxStatus={checkedAllOnPage}
+              onChecked={() => dispatch({ type: "checkAllOnPage" })}
+              onCheckAll={() => dispatch({ type: "checkAll" })}
+              actions={props.actions}
+            />
+          ) : undefined
         }
         loading={loading}
         dataSource={
           props.groupListItems ? props.groupListItems(dataSource) : dataSource
         }
-        pagination={pagination}
+        pagination={props.showActions ? pagination : undefined}
         renderItem={(item: IListItem) =>
           props.renderItem ? (
             props.renderItem({
