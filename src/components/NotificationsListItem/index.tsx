@@ -44,7 +44,7 @@ const ListItem: React.FC<ListItemProps> = ({
     <List.Item key={item.id} className={className} onClick={onClick}>
       {showCheckbox && (
         <Checkbox
-          onChange={onCheckChange.bind(null, item.id)}
+          onChange={onCheckChange?.bind(null, item.id)}
           onClick={e => e.stopPropagation()}
           checked={checked}
         />

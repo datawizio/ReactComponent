@@ -10,8 +10,8 @@ export interface IListItem {
 
 export type RenderItemProps<T> = {
   item: T;
-  onCheckChange: any;
-  checked: boolean;
+  onCheckChange?: any;
+  checked?: boolean;
 };
 
 export interface ListProps<T> extends Omit<AntListProps<T>, "renderItem"> {
